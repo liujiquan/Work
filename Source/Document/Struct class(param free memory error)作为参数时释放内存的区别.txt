@@ -1,0 +1,58 @@
+struct Test
+{
+	char * szData;
+	Test()
+	{
+		szData = (char*)malloc(1);
+	}
+	Test& operator=(Test& _this)
+	{
+		if(szData)
+		{
+			delete szData;
+			szData = NULL;
+		}
+		this->szData = (char*)malloc(1);
+		return *this;
+	}
+	~Test()
+	{
+		if(szData)
+		{
+			delete szData;
+			szData = NULL;
+		}
+	}
+};
+struct TestClass
+{
+	char * szData;
+	TestClass()
+	{
+		szData = (char*)malloc(1);
+	}
+	TestClass& operator=(TestClass& _this)
+	{
+		if(szData)
+		{
+			delete szData;
+			szData = NULL;
+		}
+		this->szData = (char*)malloc(1);
+		return *this;
+	}
+	~TestClass()
+	{
+		if(szData)
+		{
+			delete szData;
+			szData = NULL;
+		}
+	}
+};
+1:void TestFunc(Test t); 
+stack error 结构体调用一次 重载赋值运算符调用2次 析构函数调用2次 导致堆栈出错
+2:void TestFunc(Test& t);
+OK 没问题
+3:void TestClsssFunc(TestClass t);
+class 无论怎么穿参数 都没问题

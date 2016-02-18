@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>SendMailprocess</TITLE>
+<META content="text/html; charset=unicode" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.6001.23588"></HEAD>
+<BODY>
+<P>1.首先需要建立目标邮件服务器的连接。</P>
+<P>2.如果是ESMTP需要用户认证则发送EHLO加程序标识串（可自定义）,如果不需要登录用HELO<BR>加程序标识串来需要身份验证。（ehlo是extend 
+helo的缩写）</P>
+<P>3.发送AUTH LOGIN命令身份认证开始，用户名和密码需要使用base64编码</P>
+<P>4.发送MAIL FROM指明发送邮件的邮箱</P>
+<P>5.发送RCPT TO指明收信箱，如果需要多人接收邮件（包括抄送和密送），就发送多次此命令。<BR>6.发送DATA邮件正文开始</P>
+<P>7.发送From指明发件人，可以指名发件人的名字，格式如下 =?%s?B?%s?= &lt;%s&gt; 
+第一个%s是字符编码，第二个%s是名字的base64编码,第三个%s是邮箱地址</P>
+<P>8.发送To指明收信人，这里的地址必须是上面的RCPT TO的了集。可以指定名字，格式和From相同，如果有多个人用逗号隔开。</P>
+<P>9.发送Cc指明抄送，这里的地址必须是上面的RCPT TO的了集。可以指定名字，格式和From相同，如果有多个人用逗号隔开。</P>
+<P>10.发送Bcc指明密送，这里的地址必须是上面的RCPT TO的了集。可以指定名字，格式和From相同，如果有多个人用逗号隔开</P>
+<P>11.发送Date指明发信日期时间</P>
+<P>12.发送Subject发送标题</P>
+<P>13.发送X-Priority指明优先级</P>
+<P>14.发送X-Mailer说明当前客户端，可自定义</P>
+<P>15.发送mime-Version: 1.0指定MIME版本</P>
+<P>16.发送Message-ID指定消息ID</P>
+<P>17.发送Content-type定义了邮件中所含各种内容的类型以及相关属性，<BR>例如<BR>Content-type: 
+multipart/mixed;boundary="#BOUNDARY#"代表下面的内容含有附件，boundary标识将附件内容同邮件其它内容分成不同的段<BR>Content-type:multipart/alternative;boundary="{分段标识}"类型，邮件通过其boundary中的分段标识将纯文本、超文本和邮件的其它内容分成不同的段<BR>Content-type:multipart/related; 
+type="multipart/alternative";boundary="{分段标识}"类型,除了可以携带各种附件外，还可以将其它内容以内嵌资源的方式存储在邮件中<BR>邮件使用这些boundary中定义的字符串作为标识，将邮件内容分成不同的段，段体内的每个子段以“--”+boundary行开始，父段则以“--”+boundary+“--”行结束，不同段之间用空行分隔<BR>每个段中<BR>Content-type:text/plain; 
+charset=utf-8代表是纯文本内容<BR>Content-type:text/html; 
+charset=utf-8代表是网页内容<BR>Content-Type: 
+application/octet-stream;charset=utf-8;name=""<BR>Content-Disposition: 
+attachment; filename=""代表是附件<BR>&nbsp;<BR>18.发送Content-Transfer-Encoding:&nbsp; 
+base64指定正文的编码格式<BR>&nbsp;<BR>19.发送正文，以base64编码再分隔成长度为76的小块<BR>&nbsp;<BR>20.发送.\r\n邮件发送（有个英文句号哦）<BR>&nbsp;<BR>21.发送QUIT退出连接<BR></P></BODY></HTML>

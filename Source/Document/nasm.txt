@@ -1,0 +1,18 @@
+usage: ndisasm [-a] [-i] [-h] [-r] [-u] [-b bits] [-o origin] [-s sync...]
+               [-e bytes] [-k start,bytes] [-p vendor] file
+   -a or -i activates auto (intelligent) sync
+   -u same as -b 32
+   -b 16, -b 32 or -b 64 sets the processor mode
+   -h displays this text		帮助
+   -r or -v displays the version number
+   -e skips <bytes> bytes of header
+   -k avoids disassembling <bytes> bytes from position <start>
+   -p selects the preferred vendor instruction set (intel, amd, cyrix, idt)
+
+
+ndisasm -r
+-r -v: show Version 显示版本 
+
+ndisasm -b 32 123.exe >>123.txt
+-b : 16 32 64 PE Mode X86 X64
+

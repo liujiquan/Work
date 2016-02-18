@@ -1,0 +1,73 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Login - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/Login.res" /d "NDEBUG" /d "_AFXDLL" "C:\WORK\SOURCE\PROJECT\Login\Login.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP45D.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Login.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\WORK\SOURCE\PROJECT\Login\Login.cpp"
+"C:\WORK\SOURCE\PROJECT\Login\LoginDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP45D.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP45E.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Login.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\WORK\SOURCE\PROJECT\Login\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP45E.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:no /pdb:"Release/Login.pdb" /machine:I386 /out:"Release/Login.exe"  .\Release\Login.obj .\Release\LoginDlg.obj .\Release\StdAfx.obj .\Release\Login.res "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Login.cpp
+LoginDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Login.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Login - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/Login.res" /d "_DEBUG" /d "_AFXDLL" "C:\WORK\SOURCE\PROJECT\Login\Login.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP460.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Login.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\WORK\SOURCE\PROJECT\Login\Login.cpp"
+"C:\WORK\SOURCE\PROJECT\Login\LoginDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP460.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP461.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Login.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\WORK\SOURCE\PROJECT\Login\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP461.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Login.pdb" /debug /machine:I386 /out:"Debug/Login.exe" /pdbtype:sept  .\Debug\Login.obj .\Debug\LoginDlg.obj .\Debug\StdAfx.obj .\Debug\Login.res "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Login.cpp
+LoginDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Login.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,14 @@
+设置每次上传Content长度
+    ①C:\Windows\System32\inetsrv\config 
+    找到<security> - <requestFiltering>节点，
+    为这个节点添加如下元素：<requestLimits maxAllowedContentLength="2147483647" />
+    ②Web.Config 
+    <security>
+      <requestFiltering>
+        <requestLimits maxAllowedContentLength="2147483647"></requestLimits>
+      </requestFiltering>
+    </security>
+    ③Web.Config 
+    <system.web>
+      <httpRuntime maxRequestLength="2097151" executionTimeout="120" />
+    </system.web>

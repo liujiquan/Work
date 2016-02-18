@@ -1,0 +1,37 @@
+﻿1：EBP：
+擴展基址指針寄存器 extended base pointer 内存放一个指针，该指针指向系统栈最上面一个栈帧的底部。
+BP为基指针(Base Pointer)寄存器，用它可直接存取堆栈中的数据，它的作用是在调用函数时保存ESP使函数结束时可以正确返回；加E（enhance）代表增强型寄存器，用于32位数据处理。
+push	ebp					; 保存旧的ebp
+mov	ebp, esp				; ebp保存当前栈的位置
+
+2:lea Load Effective Address 读有效地址
+int nTemp;
+-->lea ebx, nTemp	就将nTemp的偏移地址读入了ebx;
+
+lea edi, DWORD PTR [ebp-C0H];
+DWORD ：刷字節 也就是4Byte
+PTR：指針 
+-》讀取 ebp-C0H地址  
+-》變量會保存在 [ebp-C0H,ebp]中間
+
+
+
+ebp+xx是参数偏移，ebp-xx是局部变量偏移
+参数 N     <--- [ebp+4*N+4]
+参数 2      <--- [ebp+12]
+参数 1      <--- [ebp+8]
+返回地址   <--- [ebp+4]
+旧的ebp值（调用者的ebp）         <--- [ebp]
+局部变量 1 <---[ebp-4]
+局部变量 2 <--- [ebp-8]
+所以这里[ebp-4]应该是某个局部变量的地址
+
+3:EFL 標誌寄存器
+
+LAHF     标志寄存器传送,把标志装入AH. 
+SAHF     标志寄存器传送,把AH内容装入标志寄存器. 
+PUSHF   16位标志入栈。（压栈单位为2，仅仅低16位）
+POPF    16位标志出栈。（出栈单位为2，仅仅2字节）
+PUSHD 32位标志入栈. 
+
+POPD  32位标志出栈

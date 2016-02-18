@@ -1,0 +1,1 @@
+osql /S%2 /U%3 /P%4 -i%1 -d%5 >> sql.log

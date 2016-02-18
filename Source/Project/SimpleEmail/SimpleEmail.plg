@@ -1,0 +1,252 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SimpleEmail - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/SimpleEmail.res" /d "NDEBUG" "C:\Work\Source\Project\SimpleEmail\SimpleEmail.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP894.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "..\include\gfxlog" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/SimpleEmail.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\SimpleEmail\MainFrm.cpp"
+"C:\Work\Source\Project\SimpleEmail\SendMailDlg.cpp"
+"C:\Work\Source\Project\SimpleEmail\SimpleEmail.cpp"
+"C:\Work\Source\Project\SimpleEmail\SimpleEmailDoc.cpp"
+"C:\Work\Source\Project\SimpleEmail\SimpleEmailView.cpp"
+"C:\Work\Source\Project\SimpleEmail\MailUtil.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendListBox.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendEdit.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendRichEdit.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendRichEditCtrl.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendStatusBar.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendButton.cpp"
+"C:\Work\Source\Project\SimpleEmail\AccountInfo.cpp"
+"C:\Work\Source\Project\SimpleEmail\InsertInfoDlg.cpp"
+"C:\Work\Source\Project\SimpleEmail\InternetAccounts.cpp"
+"C:\Work\Source\Project\SimpleEmail\SuspensionDlg.cpp"
+"C:\Work\Source\Project\SimpleEmail\InsertUser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP894.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP895.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "..\include\gfxlog" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\SimpleEmail\Base64.cpp"
+"C:\Work\Source\Project\SimpleEmail\Gfxsock.cpp"
+"C:\Work\Source\Project\SimpleEmail\URLEncode.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP895.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP896.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "..\include\gfxlog" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/SimpleEmail.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\SimpleEmail\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP896.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP897.tmp" with contents
+[
+gfxlog.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/SimpleEmail.pdb" /machine:I386 /nodefaultlib:"LIBC" /out:"Release/SimpleEmail.exe" /libpath:"..\lib\gfxlog" 
+.\Release\MainFrm.obj
+.\Release\SendMailDlg.obj
+.\Release\SimpleEmail.obj
+.\Release\SimpleEmailDoc.obj
+.\Release\SimpleEmailView.obj
+.\Release\StdAfx.obj
+.\Release\Base64.obj
+.\Release\Gfxsock.obj
+.\Release\MailUtil.obj
+.\Release\URLEncode.obj
+.\Release\ExtendListBox.obj
+.\Release\ExtendEdit.obj
+.\Release\ExtendRichEdit.obj
+.\Release\ExtendRichEditCtrl.obj
+.\Release\ExtendStatusBar.obj
+.\Release\ExtendButton.obj
+.\Release\AccountInfo.obj
+.\Release\InsertInfoDlg.obj
+.\Release\InternetAccounts.obj
+.\Release\SuspensionDlg.obj
+.\Release\SimpleEmail.res
+.\Release\InsertUser.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP897.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP898.bat" with contents
+[
+@echo off
+copy Release\SimpleEmail.exe  ..\Bin
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP898.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+SendMailDlg.cpp
+SimpleEmail.cpp
+SimpleEmailDoc.cpp
+SimpleEmailView.cpp
+MailUtil.cpp
+ExtendListBox.cpp
+ExtendEdit.cpp
+ExtendRichEdit.cpp
+ExtendRichEditCtrl.cpp
+ExtendStatusBar.cpp
+ExtendButton.cpp
+AccountInfo.cpp
+InsertInfoDlg.cpp
+InternetAccounts.cpp
+SuspensionDlg.cpp
+InsertUser.cpp
+Generating Code...
+Compiling...
+Base64.cpp
+Gfxsock.cpp
+URLEncode.cpp
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Release\SimpleEmail.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+SimpleEmail.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: SimpleEmail - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/SimpleEmail.res" /d "_DEBUG" "C:\Work\Source\Project\SimpleEmail\SimpleEmail.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89A.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\include\gfxlog" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/SimpleEmail.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\SimpleEmail\MainFrm.cpp"
+"C:\Work\Source\Project\SimpleEmail\SendMailDlg.cpp"
+"C:\Work\Source\Project\SimpleEmail\SimpleEmail.cpp"
+"C:\Work\Source\Project\SimpleEmail\SimpleEmailDoc.cpp"
+"C:\Work\Source\Project\SimpleEmail\SimpleEmailView.cpp"
+"C:\Work\Source\Project\SimpleEmail\MailUtil.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendListBox.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendEdit.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendRichEdit.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendRichEditCtrl.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendStatusBar.cpp"
+"C:\Work\Source\Project\SimpleEmail\ExtendButton.cpp"
+"C:\Work\Source\Project\SimpleEmail\AccountInfo.cpp"
+"C:\Work\Source\Project\SimpleEmail\InsertInfoDlg.cpp"
+"C:\Work\Source\Project\SimpleEmail\InternetAccounts.cpp"
+"C:\Work\Source\Project\SimpleEmail\SuspensionDlg.cpp"
+"C:\Work\Source\Project\SimpleEmail\InsertUser.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89A.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89B.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\include\gfxlog" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\SimpleEmail\Base64.cpp"
+"C:\Work\Source\Project\SimpleEmail\Gfxsock.cpp"
+"C:\Work\Source\Project\SimpleEmail\URLEncode.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89B.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89C.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\include\gfxlog" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/SimpleEmail.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\SimpleEmail\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89C.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89D.tmp" with contents
+[
+gfxlog.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/SimpleEmail.pdb" /debug /machine:I386 /nodefaultlib:"LIBCD" /out:"Debug/SimpleEmail.exe" /pdbtype:sept /libpath:"..\lib_debug\gfxlog" 
+.\Debug\MainFrm.obj
+.\Debug\SendMailDlg.obj
+.\Debug\SimpleEmail.obj
+.\Debug\SimpleEmailDoc.obj
+.\Debug\SimpleEmailView.obj
+.\Debug\StdAfx.obj
+.\Debug\Base64.obj
+.\Debug\Gfxsock.obj
+.\Debug\MailUtil.obj
+.\Debug\URLEncode.obj
+.\Debug\ExtendListBox.obj
+.\Debug\ExtendEdit.obj
+.\Debug\ExtendRichEdit.obj
+.\Debug\ExtendRichEditCtrl.obj
+.\Debug\ExtendStatusBar.obj
+.\Debug\ExtendButton.obj
+.\Debug\AccountInfo.obj
+.\Debug\InsertInfoDlg.obj
+.\Debug\InternetAccounts.obj
+.\Debug\SuspensionDlg.obj
+.\Debug\SimpleEmail.res
+.\Debug\InsertUser.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89D.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89E.bat" with contents
+[
+@echo off
+copy Debug\SimpleEmail.exe  ..\Bin_debug
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP89E.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+SendMailDlg.cpp
+SimpleEmail.cpp
+SimpleEmailDoc.cpp
+SimpleEmailView.cpp
+c:\program files\microsoft visual studio\vc98\include\set(81) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator>' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\set(80) : while compiling class-template member function 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,bool> __thiscall std::set<CString,std::less<CString>,std::allocator<CString> >::insert(const CString &)'
+c:\program files\microsoft visual studio\vc98\include\set(81) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::const_iterator,std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::const_iterator>' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\set(80) : while compiling class-template member function 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,bool> __thiscall std::set<CString,std::less<CString>,std::allocator<CString> >::insert(const CString &)'
+MailUtil.cpp
+C:\Work\Source\Project\SimpleEmail\MailUtil.cpp(24) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator>' : identifier was truncated to '255' characters in the debug information
+C:\Work\Source\Project\SimpleEmail\MailUtil.cpp(24) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::const_iterator,std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::const_iterator>' : identifier was truncated to '255' characters in the debug information
+ExtendListBox.cpp
+ExtendEdit.cpp
+ExtendRichEdit.cpp
+ExtendRichEditCtrl.cpp
+ExtendStatusBar.cpp
+ExtendButton.cpp
+AccountInfo.cpp
+InsertInfoDlg.cpp
+InternetAccounts.cpp
+SuspensionDlg.cpp
+c:\program files\microsoft visual studio\vc98\include\set(56) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator>' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\set(56) : while compiling class-template member function 'std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator __thiscall std::set<CString,std::less<CString>,std::allocator<CString> >::begin(void)'
+c:\program files\microsoft visual studio\vc98\include\set(56) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::const_iterator,std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::const_iterator>' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\set(56) : while compiling class-template member function 'std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator __thiscall std::set<CString,std::less<CString>,std::allocator<CString> >::begin(void)'
+InsertUser.cpp
+c:\program files\microsoft visual studio\vc98\include\set(56) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator>' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\set(56) : while compiling class-template member function 'std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator __thiscall std::set<CString,std::less<CString>,std::allocator<CString> >::begin(void)'
+c:\program files\microsoft visual studio\vc98\include\set(56) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::const_iterator,std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::const_iterator>' : identifier was truncated to '255' characters in the debug information
+        c:\program files\microsoft visual studio\vc98\include\set(56) : while compiling class-template member function 'std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator __thiscall std::set<CString,std::less<CString>,std::allocator<CString> >::begin(void)'
+Generating Code...
+c:\program files\microsoft visual studio\vc98\include\xtree(236) : warning C4786: '__ehhandler$?insert@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@QAE?AU?$pair@Viterator@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@_N@2@ABVCString@@@Z' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xtree(236) : warning C4786: '__unwindfunclet$?insert@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@QAE?AU?$pair@Viterator@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@_N@2@ABVCString@@@Z$0' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\utility(21) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,bool>::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,bool>' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xtree(182) : warning C4786: 'std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::~_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xtree(162) : warning C4786: 'std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xtree(236) : warning C4786: '__ehhandler$?insert@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@QAE?AU?$pair@Viterator@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@_N@2@ABVCString@@@Z' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xtree(236) : warning C4786: '__unwindfunclet$?insert@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@QAE?AU?$pair@Viterator@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@_N@2@ABVCString@@@Z$0' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\utility(21) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,bool>::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,bool>' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xtree(236) : warning C4786: '__ehhandler$?insert@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@QAE?AU?$pair@Viterator@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@_N@2@ABVCString@@@Z' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\xtree(236) : warning C4786: '__unwindfunclet$?insert@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@QAE?AU?$pair@Viterator@?$_Tree@VCString@@V1@U_Kfn@?$set@VCString@@U?$less@VCString@@@std@@V?$allocator@VCString@@@3@@std@@U?$less@VCString@@@4@V?$allocator@VCString@@@4@@std@@_N@2@ABVCString@@@Z$0' : identifier was truncated to '255' characters in the debug information
+c:\program files\microsoft visual studio\vc98\include\utility(21) : warning C4786: 'std::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,bool>::pair<std::_Tree<CString,CString,std::set<CString,std::less<CString>,std::allocator<CString> >::_Kfn,std::less<CString>,std::allocator<CString> >::iterator,bool>' : identifier was truncated to '255' characters in the debug information
+Compiling...
+Base64.cpp
+Gfxsock.cpp
+URLEncode.cpp
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\SimpleEmail.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+SimpleEmail.exe - 0 error(s), 19 warning(s)
+</pre>
+</body>
+</html>

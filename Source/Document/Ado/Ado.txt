@@ -1,0 +1,128 @@
+﻿FieldPtr
+{
+	long Status;
+	_variant_t Value;
+	_bstr_t Name;
+	enum DataTypeEnum Type;
+	long DefinedSize;
+	_variant_t OriginalValue;
+	_variant_t UnderlyingValue;
+	long ActualSize;
+	unsigned char Precision;
+	unsigned char NumericScale;
+	long Attributes;
+	IUnknownPtr DataFormat;
+}
+
+ADO封裝
+Conection封裝
+
+
+#define CONNECTSTR _T("Provider=SQLOLEDB.1;
+User ID=amano_getuser;
+Password=amano_getuser;
+Persist Security Info=True;
+Initial Catalog=amano_noda;
+Data Source=LIUJIQUAN-WIN7")
+
+
+adCmdUnspecified 參數默認表示沒有定義
+adCmdText 	參數是Sql語句
+adCmdTable	參數是一個Table	
+
+CursorTypeEnum
+{
+    adOpenUnspecified = -1,		不指定游标类型。
+    adOpenForwardOnly = 0,		默认值。使用仅向前游标。除了在记录中只能向前滚动外，与静态游标相同。当只需要在 Recordset 中进行一个传递时，用它可提高性能。
+    adOpenKeyset = 1,			k使用键集游标。尽管从您的 Recordset 不能访问其他用户删除的记录，但除了无法查看其他用户添加的记录外，它和动态游标相似。其他用户所作的数据更改依然可见。
+    adOpenDynamic = 2,			使用动态游标。其他用户所作的添加、更改或删除均可见，而且允许 Recordset 中的所有移动类型（如果提供者不支持书签，则书签除外）。
+    adOpenStatic = 3			使用静态游标。一组记录的静态副本，可用于查找数据或生成报告。其他用户所作的添加、更改或删除均不可见。
+};
+
+hr = m_pConnection->Open(bsSource, bsUser, bsPassword, adCmdUnspecified);
+enum __declspec(uuid("0000052e-0000-0010-8000-00aa006d2ea4"))
+CommandTypeEnum
+{
+    adCmdUnspecified = -1,		不指定命令类型的参数。 數據源
+    adCmdUnknown = 8,			未知	
+    adCmdText = 1,			按命令或存储过程调用的文本定义计算 CommandText。SQL
+    adCmdTable = 2,			按表名计算 CommandText，该表的列全部是由内部生成的 SQL 查询返回的。
+    adCmdStoredProc = 4,		按存储过程名计算 CommandText。
+    adCmdFile = 256,			按持久存储的 Recordset 的文件名计算 CommandText。仅与 Recordset.Open 或 Requery 使用。
+    adCmdTableDirect = 512		按表名计算 CommandText，该表的列被全部返回。仅与 Recordset.Open 或 Requery 使用。如需使用 Seek 方法，Recordset 必须通过 adCmdTableDirect 打开。该值不能与 ExecuteOptionEnum 值 adAsyncExecute 结合。
+};
+m_pConnection->Open(strConnect,_T(""),_T(""),adModeUnknown);
+ConnectModeEnum
+{		
+    adModeUnknown = 0,			默认值。权限尚未设置或不能确定权限。 
+    adModeRead = 1,			只读权限。 
+    adModeWrite = 2,			只写权限。 
+    adModeReadWrite = 3,		读/写权限。 
+    adModeShareDenyRead = 4,		禁止其他人以读权限打开连接。 
+    adModeShareDenyWrite = 8,		禁止其他人以写权限打开连接。 
+    adModeShareExclusive = 12,		禁止其他人打开连接。
+    adModeShareDenyNone = 16		允许其他人以任何权限打开连接。不拒绝其他人的读或写访问
+};
+
+enum __declspec(uuid("0000051d-0000-0010-8000-00aa006d2ea4"))
+LockTypeEnum
+{
+    adLockUnspecified = -1,	未指定锁定类型。创建副本时，副本与源对象使用相同的锁定类型。 
+    adLockReadOnly = 1,		指示只读记录。无法改变数据。 
+    adLockPessimistic = 2,	指示逐个记录的保守式锁定。提供者要确保记录编辑成功，通常在编辑之后立即在数据源锁定记录。 
+    adLockOptimistic = 3,	指示逐个记录的开放式锁定。提供者使用开放式锁定，仅在调用 Update 方法时锁定记录。 
+    adLockBatchOptimistic = 4	指示开放式批更新。需要批更新模式。 
+};
+、
+測試：
+hr = m_RecordSet->Open((_variant_t)m_SQL,m_pConnection,adOpenForwardOnly,adLockReadOnly,adCmdText);	
+2：不能事務
+hr = m_RecordSet->Open((_variant_t)m_SQL,m_pConnection,adOpenKeyset/adOpenDynamic/adOpenStatic,adLockReadOnly,adCmdText);
+2：可以事務 = 0,
+
+
+Connection 对象或 Command 上的 CommandTimeout 属性，
+允许由于网络拥塞或服务器负载过重产生的延迟而取消 Execute 方法调用。
+如果在 CommandTimeout 属性中设置的时间间隔内没有完成命令执行，
+将产生错误，然后 ADO 将取消该命令。如果将该属性设置为零，
+ADO 将无限期等待直到命令执行完毕。请确保正在写入代码的提供者和数据源支持 CommandTimeout 功能。
+
+AbsolutePage  或设置当前记录位置的绝对页号  不可访问 读/写
+AbsolutePosition 当前记录所在的绝对位置    不可访问 读/写
+ActiveConnetion   提示当前活动的connection对象   读/写   只读
+Bof    记录位置是否在首行之前    不可访问 只读
+Bookmark   书签      不可访问 读/写
+CacheSize   在缓冲区类可存储记录的数目   读/写   只读
+CursorLocation   设置或返回光标位置    不可访问 读/写
+CursorType   指出光标类型     读/写   只读
+EditMode   当前记录集的编辑状态    不可访问 只读
+Eof    指出当前光标是否位于最后一个记录之后 不可访问 只读
+Fields    字段集合     只读
+Filter    过滤器      读/写   读/写
+LockType   锁定类型     读/写   只读
+Maxrecords   该记录集对象最大的记录数目,
+    缺省值为0,表示无限制    读/写   只读
+PageCount   当前记录总页数     不可访问 只读
+PageSize   当前记录集一页的记录数    读/写   只读
+RecordCount   当前总记录数     不可访问 只读
+Sort    一个Recordset对象的数据源   读/写   只读
+State    对象当前所处状态    只读   只读
+Status    最近动作的状态     不可访问 只读
+
+
+SQLServer查看表結構
+select * from information_schema.columns where TABLE_NAME='DOEMPJ01'
+
+字符 字節區別：
+1：字節 byte
+2：字符 字符是文字或符号的统称 不同的编码方式下一个字符占的字节书不太一样。 
+
+ObjectStateEnum
+AdStateClosed 默认，指示对象是关闭的。 
+AdStateOpen 指示对象是打开的。 
+AdStateConnecting 指示 Recordset 对象正在连接。 
+AdStateExecuting 指示 Recordset 对象正在执行命令。 
+AdStateFetching 指示 Recordset 对象的行正在被读取。 
+
+
+GetRecordCount的使用问题在技术社区里也讨论很多次，一般的建议都是尽量不使用这个函数，要使用也是先通过循环MoveFirst、MoveNext遍历后在使用。但是这样感觉很麻烦也不是很安全，因为如果没有记录很难保证MoveFirst不抛出异常，当然也可以使用try{...}、catch(_com_error &e){...}方式来捕捉异常。所以另一钟更常见的方式就是使用select count(*) as tatol from table查询语句，然后用GetCollect方法(ADO)取得total的值来得到。在很多时候，我们又很需要GetRecordCount函数来快速判断一个打开的记录集里面总共有多少条记录。我一般是使用ADO方式操作数据库，所以这里谈的很多情况只适合ADO方式。先看个问题：_ConnectionPtr m_pCon;_RecordsetPtr m_pSet;m_pSet.CreateInstance("ADO.Record");m_pCon.CreateInstance("ADO.Connect");m_pCon->Open("DSN=***;.....);//连接到一个设置好的DSN名称，后面的参数就不写啦 m_pSet->Open();//这里打开一个表关键位置：if(m_pSet->GetRecordCount() != 0)//如果记录条数不为0{//控制操作记录}以上代码能够完全正常的运行，后来把连接的语句换为了：m_pCon->Open("provider=sqloledb;.....); //换了一种数据库连接提供者却发现查不到任何的数据，跟踪发现GetRecordCount()返回值变成了-1，而且记录集里也有记录存在。后来通过查MSDN解决了问题。一般情况下当ADO不能确定记录条数，或者连接提供者、游标类型都不支持RecordCount的时候，RecordCount属性都将返回-1。而在一个已经关闭了的Recordset上读取这个属性会引起错误。最常用的两个游标类型是：adUseClient 使用由本地游标库提供的客户端游标。本地游标引擎通常允许使用的许多功能可能是驱动程序提供的游标无法使用的，因此使用该设置对于那些将要启用的功能是有好处的。adUseClientBatch与 adUseClient同义，也支持向后兼容性。 adUseServer 默认值。使用数据提供者或驱动程序提供的游标。这些游标有时非常灵活，对于其他用户对数据源所作的更改具有额外的敏感性。但是，Microsoft Client Cursor Provider（如已断开关联的记录集）的某些功能无法由服务器端游标模拟，通过该设置将无法使用这些功能。这是MSDN上的解释，补充说明：使用adUseClient就是表示数据需要传输到客户端后再进行操作，不具有同步。它能更好的支持RecordCount属性，这样对性能的影响比较大，如果数据很多会更明显。adUseServer是直接在数据库中操作，处理的速度比较快。在其他的很多方面adUesServer很有限制。再回来看RecordCount，已经记录集的游标类型会影响记录条数的确定，除了上面提到的两种，只支持向前滚动的游标也会返回-1，对静态的指针会返回实际的记录条数，而对一个动态的游标返回值是-1还是实际的条数取决于数据源，正如我上面遇到的问题，使用DSN能正确的返回，而SQLOLEDB不行。为了使用RecordCount属性，我们需要使用设置好游标(静态/客户)：在m_pSet->Open()前加上：m_pSet->CursorType = adOpenStatic;m_pSet->CursorLocation = adUseClient;

@@ -1,0 +1,72 @@
+﻿char* g_Data = "liujiquan";				// [Static ]Global Member 	全局静态变量
+static char* g_Data2 = "zhangsan";		// Global Member			全局变量
+int main(int argc, char* argv[])
+{
+	char* data = "China";				// Local variables			局部变量
+	static char* data2 = "USA";			// [Static ]Local variables	局部静态变量
+
+	printf("Hello World!\n");
+	printf("%s\n", g_Data);
+	printf("%s\n", data);
+	printf("%s\n", data2);
+	system("pause");
+	return 0;
+}
+Notes：只有全局变量和静态变量才是 分配VA 然后通过RVA查找
+	其他变量采取直接RVA查找
+Notes2：内存采取4字节对齐  也就是如果某个字符床站N个字符(+0x00) (N-1)/4×4 + 4
+
+char* g_Data = "liujiquan";			704C
+static char* g_Data2 = "zhangsan";	7040
+
+char* data = "China";				7060
+static char* data2 = "USA";  		703c
+%s									7068
+
+7000	00 00 00 00 
+7004	00 00 00 00 
+7008	00 00 00 00 
+700B	D3 1F 40 00 
+7010	13 3C 40 00 
+7014	00 00 00 00 
+7018	00 00 00 00 
+701B	78 20 40 00 
+7020	00 00 00 00 
+7024	00 00 00 00 
+7028	00 00 00 00 
+702B	00 00 00 00 
+7030	4C 70 40 00 	VA1	char* g_Data = "liujiquan";		
+7034	40 70 40 00 	VA2	static char* g_Data2 = "zhangsan";
+7038	3C 70 40 00 	VA3	static char* data2 = "USA"; 
+
+
+	
+703C	55 53 41 00 	"USA",		00
+7040	7A 68 61 6E 	"zhangsan",	00,00,00,00
+		67 73 61 6E 
+		00 00 00 00 
+704C	6C 69 75 6A 	"liujiquan",	00,00,00
+		69 71 75 61 
+		6E 00 00 00 	
+7058	70 61 75 73 	"pause",00,00,00
+		65 00 00 00 
+7060	43 68 69 6E 	"China";,00,00,00
+		61 00 00 00 
+7068	25 73 0A 00 	"%s\n",00
+706C	48 65 6C 6C 	"Hello World!\n",00,00,00
+		6F 20 57 6F 
+		72 6C 64 21 
+		0A 00 00 00 
+		E0 13 40 00 
+		01 00 00 00 
+		10 61 40 00 	.cmd.
+		08 61 40 00 	.bat
+		00 61 40 00 	.exe
+		F8 60 40 00 	.com
+		88 61 40 00 	(null).
+		78 61 40 00 	(.n.u.l.l.)
+		00 00 00 00 
+		60 7E 40 00 	
+		00 00 00 00 
+		60 7E 40 00 
+		01 01 00 00

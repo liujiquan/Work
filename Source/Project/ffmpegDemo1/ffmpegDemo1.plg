@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ffmpegDemo1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP23E4.tmp" with contents
+[
+/nologo /Zp1 /MDd /W3 /Gm /GX /ZI /Od /I "include/" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/ffmpegDemo1.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\WORK\SOURCE\PROJECT\ffmpegDemo1\Util.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP23E4.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP23E5.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ffmpegDemo1.pdb" /debug /machine:I386 /out:"Debug/ffmpegDemo1.exe" /pdbtype:sept /libpath:"..\lib_debug\ffmpeg" /libpath:"..\lib_debug\sdl\x86" 
+.\Debug\ffmpegDemo1.obj
+.\Debug\ffmpegDemo1Dlg.obj
+.\Debug\StdAfx.obj
+.\Debug\Util.obj
+.\Debug\ffmpegDemo1.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP23E5.tmp"
+<h3>Output Window</h3>
+Compiling...
+Util.cpp
+c:\program files\microsoft visual studio\vc98\include\wchar.h(700) : error C2733: second C linkage of overloaded function 'wmemchr' not allowed
+        c:\program files\microsoft visual studio\vc98\include\wchar.h(699) : see declaration of 'wmemchr'
+c:\program files\microsoft visual studio\vc98\include\wchar.h(702) : error C2733: second C linkage of overloaded function 'wcschr' not allowed
+        c:\program files\microsoft visual studio\vc98\include\wchar.h(701) : see declaration of 'wcschr'
+c:\program files\microsoft visual studio\vc98\include\wchar.h(704) : error C2733: second C linkage of overloaded function 'wcspbrk' not allowed
+        c:\program files\microsoft visual studio\vc98\include\wchar.h(703) : see declaration of 'wcspbrk'
+c:\program files\microsoft visual studio\vc98\include\wchar.h(706) : error C2733: second C linkage of overloaded function 'wcsrchr' not allowed
+        c:\program files\microsoft visual studio\vc98\include\wchar.h(705) : see declaration of 'wcsrchr'
+c:\program files\microsoft visual studio\vc98\include\wchar.h(708) : error C2733: second C linkage of overloaded function 'wcsstr' not allowed
+        c:\program files\microsoft visual studio\vc98\include\wchar.h(707) : see declaration of 'wcsstr'
+c:\work\source\project\include\sdl\include\sdl_config_win32.h(33) : error C2371: 'int8_t' : redefinition; different basic types
+        c:\work\source\project\ffmpegdemo1\include\stdint.h(62) : see declaration of 'int8_t'
+c:\work\source\project\include\sdl\include\sdl_config_win32.h(34) : error C2371: 'uint8_t' : redefinition; different basic types
+        c:\work\source\project\ffmpegdemo1\include\stdint.h(65) : see declaration of 'uint8_t'
+c:\work\source\project\include\sdl\include\sdl_config_win32.h(35) : error C2371: 'int16_t' : redefinition; different basic types
+        c:\work\source\project\ffmpegdemo1\include\stdint.h(63) : see declaration of 'int16_t'
+c:\work\source\project\include\sdl\include\sdl_config_win32.h(36) : error C2371: 'uint16_t' : redefinition; different basic types
+        c:\work\source\project\ffmpegdemo1\include\stdint.h(66) : see declaration of 'uint16_t'
+c:\work\source\project\include\sdl\include\sdl_config_win32.h(37) : error C2371: 'int32_t' : redefinition; different basic types
+        c:\work\source\project\ffmpegdemo1\include\stdint.h(64) : see declaration of 'int32_t'
+c:\work\source\project\include\sdl\include\sdl_config_win32.h(38) : error C2371: 'uint32_t' : redefinition; different basic types
+        c:\work\source\project\ffmpegdemo1\include\stdint.h(67) : see declaration of 'uint32_t'
+c:\work\source\project\include\sdl\include\sdl_main.h(54) : warning C4067: unexpected tokens following preprocessor directive - expected a newline
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+ffmpegDemo1.exe - 11 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

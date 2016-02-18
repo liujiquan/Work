@@ -1,0 +1,108 @@
+http://blog.csdn.net/leixiaohua1020/article/details/12747899
+
+配置Project:
+..\bin\ffmpeg\Bin
+,inline=__inline
+..\include\ffmpeg\include
+..\lib\ffmpeg\lib
+avcodec.lib avdevice.lib avfilter.lib avformat.lib avutil.lib postproc.lib swresample.lib swscale.lib SDL2.lib SDL2main.lib
+MTD
+
+1：VC6.0MFC下：
+	1）：	SDL_CreateWindow Error 函数调用不能再Dialog内 可以放在APP类里面执行
+	2）：创建一个线程 放在线程里面执行
+2.1：MFC: 减去SDL2main.lib 
+回到这 packet->stream_index == nVedioIndex出错
+2.2：保留SDL2main.lib
+error LNK2001: unresolved external symbol _SDL_main
+增加：extern C_LINKAGE int SDL_main(int argc, char *argv[])	{	return 0;	}
+unresolved external symbol __imp____iob_func
+
+
+2、解决error C2054: expected '(' to follow 'inline'
+
+不用改代码，直接改project->[setting]->[c/c++]->Preprocessor definitions:编辑框里输入inline=__inline即可
+
+新增两个文件 stdint.h inttypes.h 到vc环境目录下
+修改：
+1:include\ffmpeg\include\libavutil\attributes.h
+：
+line86:
+#if AV_GCC_VERSION_AT_LEAST(3,1)
+#    define attribute_deprecated __attribute__((deprecated))
+// 2014.11.11 Ver1.00[FFMPEG Setting Windows XP VC6.0] Start
+//#elif defined(_MSC_VER)
+#elif defined(_MSC_VER) && _MSC_VER >= 1300
+// 2014.11.11 Ver1.00[FFMPEG Setting Windows XP VC6.0] End
+#    define attribute_deprecated __declspec(deprecated)
+#else
+#    define attribute_deprecated
+#endif
+
+2:c:\Work\Source\Project\include\ffmpeg\include\libavutil\mem.h
+line71:
+
+// 2014.11.11 Ver1.00[FFMPEG Setting Windows XP VC6.0] Start
+//  #define av_alloc_size(n)
+	#define av_alloc_size(n)
+// 2014.11.11 Ver1.00[FFMPEG Setting Windows XP VC6.0] End
+3：
+c:\Work\Source\Project\include\ffmpeg\include\libavutil\log.h
+line332：
+
+// 2014.11.11 Ver1.00[FFMPEG Setting Windows XP VC6.0] Start
+//#    define av_dlog(pctx, n) do { if (0) av_log(pctx, AV_LOG_DEBUG, __VA_ARGS__); } while (0)
+#    define av_dlog(pctx, n) do { if (0) av_log(pctx, AV_LOG_DEBUG, __VA_ARGS__); } while (0)
+// 2014.11.11 Ver1.00[FFMPEG Setting Windows XP VC6.0] End
+
+
+
+avcodec.lib
+avdevice.lib
+avfilter.lib
+avformat.lib
+avutil.lib
+postproc.lib
+SDL2.lib
+SDL2main.lib
+swresample.lib
+swscale.lib
+
+1:av_register_all 注册多种音视频格式的编解码器,并注册各种文件的编解复用器
+2:av_file_map 读取文件内容大小
+3：AVFormatContext *fmt_ctx = avformat_alloc_context() 分配
+4：avformat_free_context() 释放
+5：
+avio_ctx_buffer = (uint8_t*)av_malloc(avio_ctx_buffer_size);
+
+6：
+AVIOContext *avio_alloc_context(
+                  unsigned char *buffer,
+                  int buffer_size,
+                  int write_flag,
+                  void *opaque,
+                  int (*read_packet)(void *opaque, uint8_t *buf,int buf_size),
+                  int (*write_packet)(void *opaque, uint8_t *buf,int buf_size),
+                  int64_t (*seek)(void *opaque, int64_t offset,int whence));
+
+Error
+1：:
+SDLmain.lib(SDL_win32_main.obj) : error LNK2019: unresolved external symbol
+_SDL 
+因为#define main SDL_main  --->我们的main函数名就这边被改变了。
+MFC：
+去除SDL2main.lib
+win32中
+，Linker-->Advanced-->Entry Point 填写新的入口函数例如_MYMain
+
+2：
+ 在ignore librayr中添加MSVCRT
+
+3：
+'avcodec_free_frame': was declared deprecated
+使用更加安全的函数 ;例如copy -> copy_s
+或者
+
+4：
+error C2632: 'long' followed by 'long' is illegal
+long long -> _int64

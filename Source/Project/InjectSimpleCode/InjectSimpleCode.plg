@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: InjectSimpleCode - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1580.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/InjectSimpleCode.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\InjectSimpleCode\InjectSimpleCodeDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1580.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1581.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/InjectSimpleCode.pdb" /debug /machine:I386 /out:"Debug/InjectSimpleCode.exe" /pdbtype:sept 
+.\Debug\InjectSimpleCode.obj
+.\Debug\InjectSimpleCodeDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\InjectSimpleCode.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1581.tmp"
+<h3>Output Window</h3>
+Compiling...
+InjectSimpleCodeDlg.cpp
+C:\Work\Source\Project\InjectSimpleCode\InjectSimpleCodeDlg.cpp(444) : warning C4244: '=' : conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+C:\Work\Source\Project\InjectSimpleCode\InjectSimpleCodeDlg.cpp(456) : warning C4244: '=' : conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+Linking...
+
+
+
+<h3>Results</h3>
+InjectSimpleCode.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

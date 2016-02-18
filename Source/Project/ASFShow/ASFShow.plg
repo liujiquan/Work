@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ASFShow - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP458.tmp" with contents
+[
+/nologo /Zp1 /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/ASFShow.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\ASFShow\ASFShow.cpp"
+"C:\Work\Source\Project\ASFShow\ASFShowDlg.cpp"
+"C:\Work\Source\Project\ASFShow\SuperGridCtrl\MySuperGrid.cpp"
+"C:\Work\Source\Project\ASFShow\ASFdefine.cpp"
+"C:\Work\Source\Project\ASFShow\AsfInfo.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP458.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP459.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ASFShow.pdb" /debug /machine:I386 /out:"Debug/ASFShow.exe" /pdbtype:sept 
+.\Debug\ASFShow.obj
+.\Debug\ASFShowDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\ComboInListView.obj
+.\Debug\listeditctrl.obj
+.\Debug\MySuperGrid.obj
+.\Debug\supergridctrl.obj
+.\Debug\ASFdefine.obj
+.\Debug\AsfInfo.obj
+.\Debug\ASFShow.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP459.tmp"
+<h3>Output Window</h3>
+Compiling...
+ASFShowDlg.cpp
+MySuperGrid.cpp
+Generating Code...
+Compiling...
+ASFShow.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+ASFdefine.cpp
+AsfInfo.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+ASFShow.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

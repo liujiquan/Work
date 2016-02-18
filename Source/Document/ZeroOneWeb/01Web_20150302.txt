@@ -1,0 +1,29 @@
+1：作成js文件夹
+	：作成css文件夹
+	：作成images文件夹
+	：作成page文件夹
+2：VersionInfo
+FileViersion:		10, 9, 0, 1
+ProductViersion:	10, 9, 0, 1
+Company Name:		ZeroOne Business Solutions Corporation
+FileDesc:		ZeroOneWeb
+FileVersion:		10.9
+LegalCopyRight:		Copyright (C) ZeroOne Corporation 2015 - 2015 
+ProductName:		ZeroOneWeb
+ProductVersion:		10.9
+
+注意：utf8
+2：作成登录画面
+
+3:生成数据库 生成数据源 新增数据
+
+4：作成ZowSendMailX.dll
+新建MFC 扩展dll
+添加CZowSendMailCtrl类，CZowSendMailApp类 CZowSendMailDoc类
+
+copy "$(OutDir)"\"$(TargetName)".dll ..\bin
+copy "$(OutDir)"\"$(TargetName)".lib ..\lib
+../bin/$(TargetName).dll
+copy "$(OutDir)"\"$(TargetName)".dll ..\bin_debug
+copy "$(OutDir)"\"$(TargetName)".lib ..\lib_debug
+../bin_debug/$(TargetName).dll

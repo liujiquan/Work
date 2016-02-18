@@ -1,0 +1,104 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Saolei - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/Saolei.res" /d "NDEBUG" /d "_AFXDLL" "C:\Work\Source\Repository\Source\Saolei\Saolei.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPBB.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Saolei.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Repository\Source\Saolei\Saolei.cpp"
+"C:\Work\Source\Repository\Source\Saolei\SaoleiDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPBB.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPBC.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Saolei.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Repository\Source\Saolei\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPBC.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:no /pdb:"Release/Saolei.pdb" /machine:I386 /out:"Release/Saolei.exe"  .\Release\Saolei.obj .\Release\SaoleiDlg.obj .\Release\StdAfx.obj .\Release\Saolei.res "
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPBD.bat" with contents
+[
+@echo off
+copy Release\Saolei.exe  ..\Bin
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPBD.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Saolei.cpp
+SaoleiDlg.cpp
+C:\Work\Source\Repository\Source\Saolei\SaoleiDlg.cpp(200) : warning C4101: 'dwReadSize' : unreferenced local variable
+Generating Code...
+C:\Work\Source\Repository\Source\Saolei\SaoleiDlg.cpp(465) : warning C4700: local variable 'ny' used without having been initialized
+C:\Work\Source\Repository\Source\Saolei\SaoleiDlg.cpp(467) : warning C4700: local variable 'nx' used without having been initialized
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Release\Saolei.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+Saolei.exe - 0 error(s), 3 warning(s)
+<h3>
+--------------------Configuration: Saolei - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/Saolei.res" /d "_DEBUG" /d "_AFXDLL" "C:\Work\Source\Repository\Source\Saolei\Saolei.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPBF.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FAcs /Fa"Debug/" /Fr"Debug/" /Fp"Debug/Saolei.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ "Debug/123.asm" "Debug/123.asm" /c 
+"C:\Work\Source\Repository\Source\Saolei\Saolei.cpp"
+"C:\Work\Source\Repository\Source\Saolei\SaoleiDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPBF.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPC0.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FAcs /Fa"Debug/" /Fr"Debug/" /Fp"Debug/Saolei.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ "Debug/123.asm" "Debug/123.asm" /c 
+"C:\Work\Source\Repository\Source\Saolei\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPC0.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Saolei.pdb" /debug /machine:I386 /out:"Debug/Saolei.exe" /pdbtype:sept  .\Debug\Saolei.obj .\Debug\SaoleiDlg.obj .\Debug\StdAfx.obj .\Debug\Saolei.res "
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPC1.bat" with contents
+[
+@echo off
+copy Debug\Saolei.exe  ..\Bin_debug
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSPC1.bat"
+Compiling resources...
+Compiling...
+Command line warning D4024 : unrecognized source file type 'Debug/123.asm', object file assumed
+Command line warning D4027 : source file 'Debug/123.asm' ignored
+Command line warning D4024 : unrecognized source file type 'Debug/123.asm', object file assumed
+Command line warning D4027 : source file 'Debug/123.asm' ignored
+StdAfx.cpp
+Compiling...
+Command line warning D4024 : unrecognized source file type 'Debug/123.asm', object file assumed
+Command line warning D4027 : source file 'Debug/123.asm' ignored
+Command line warning D4024 : unrecognized source file type 'Debug/123.asm', object file assumed
+Command line warning D4027 : source file 'Debug/123.asm' ignored
+Saolei.cpp
+SaoleiDlg.cpp
+C:\Work\Source\Repository\Source\Saolei\SaoleiDlg.cpp(200) : warning C4101: 'dwReadSize' : unreferenced local variable
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\Saolei.exe
+        1 file(s) copied.
+Creating command line "bscmake.exe /nologo /o"Debug/Saolei.bsc"  .\Debug\StdAfx.sbr .\Debug\Saolei.sbr .\Debug\SaoleiDlg.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Saolei.exe - 0 error(s), 9 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,281 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Encrypt.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Encrypt.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 255, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Encrypt"
+FONT 12, "Fixedsys"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,0,0,20,20
+    LTEXT           "ftp://dy:dy@xlj.2tu.cc:31111/.rmvb",IDC_STATIC,31,3,217,
+                    8
+    LTEXT           "thunder:AAftp://dy:dy@xlj.2tu.cc:31111/.rmvbZ",
+                    IDC_STATIC,31,15,217,8
+    LTEXT           "[FLASHGET]ftp://dy:dy@xlj.2tu.cc:31111/.rmvb[FLASHGET]",
+                    IDC_STATIC,31,27,217,8
+    LTEXT           "qqdl:ftp://dy:dy@xlj.2tu.cc:31111/.rmvb",IDC_STATIC,31,
+                    39,217,8
+    EDITTEXT        IDC_EDIT1,37,121,40,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+END
+
+IDD_ENCRYPT_DIALOG DIALOGEX 0, 0, 406, 413
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT | WS_EX_APPWINDOW
+CAPTION "Encrypt"
+FONT 12, "Fixedsys"
+BEGIN
+    EDITTEXT        IDC_EDIT1,0,0,406,33,ES_MULTILINE | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    GROUPBOX        "Encrypt",IDC_STATIC,0,33,406,174
+    GROUPBOX        "",IDC_STATIC,34,33,372,173
+    PUSHBUTTON      "Encrypt",IDC_BUTTON_Encrypt,3,45,30,26
+    LTEXT           "Base64 :",IDC_STATIC,38,45,33,8,0,WS_EX_ACCEPTFILES
+    EDITTEXT        IDC_EDIT3,73,44,329,38,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Thunder :",IDC_STATIC,36,86,37,8
+    EDITTEXT        IDC_EDIT5,73,85,329,38,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "qqdl    :",IDC_STATIC,36,127,37,8
+    EDITTEXT        IDC_EDIT6,73,126,329,38,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Flashget:",IDC_STATIC,36,168,37,8
+    EDITTEXT        IDC_EDIT7,73,167,329,38,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    GROUPBOX        "Decrypt",IDC_STATIC,0,208,406,36
+    PUSHBUTTON      "Decrypt",IDC_BUTTON_Decrypt,3,216,30,26
+    LTEXT           "Base64 :",IDC_STATIC,39,215,33,8
+    EDITTEXT        IDC_EDIT4,73,213,329,29,ES_MULTILINE | WS_HSCROLL
+    GROUPBOX        "URLEncode/Decode",IDC_STATIC,0,248,406,48
+    PUSHBUTTON      "URLEncode",IDC_BUTTON_URLEncode,3,257,47,14
+    PUSHBUTTON      "URLDecode",IDC_BUTTON_URLDecode,3,274,47,14
+    CONTROL         "UTF-8",IDC_RADIOUTF8,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,59,261,36,10
+    CONTROL         "ASCII",IDC_RADIOUTFASCII,"Button",BS_AUTORADIOBUTTON,59,
+                    277,36,10
+    EDITTEXT        IDC_EDIT8,95,256,307,33,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL,WS_EX_ACCEPTFILES
+    EDITTEXT        IDC_EDIT9,71,326,329,12
+    GROUPBOX        "ed2k",IDC_STATIC,0,300,405,44
+    PUSHBUTTON      "DecryptEd2k",IDC_BUTTON_DecryptEd2k,3,327,47,14
+    PUSHBUTTON      "EncryptEd2k",IDC_BUTTON_EncryptEd2k,3,307,47,14,0,
+                    WS_EX_ACCEPTFILES
+    CONTROL         "RSHash",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,70,306,46,8
+    CONTROL         "JSHash",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,123,306,
+                    46,8
+    CONTROL         "PJWHash",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,176,306,
+                    46,8
+    CONTROL         "ELFHash",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,229,306,
+                    46,8
+    CONTROL         "BKDRHash",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,282,
+                    306,46,8
+    CONTROL         "SDBMHash",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,335,
+                    306,46,8
+    CONTROL         "DJBHash",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,70,318,
+                    46,8
+    CONTROL         "DEKHash",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,123,318,
+                    46,8
+    CONTROL         "BPHash",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,176,318,
+                    46,8
+    CONTROL         "FNVHash",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,229,
+                    318,46,8
+    CONTROL         "APHash",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,282,318,
+                    36,8
+    EDITTEXT        IDC_EDIT10,71,350,332,14,ES_AUTOHSCROLL,
+                    WS_EX_ACCEPTFILES
+    GROUPBOX        "MD5",IDC_STATIC,0,342,404,24
+    PUSHBUTTON      "MD5",IDC_BUTTON1,3,351,47,14
+    GROUPBOX        "CyberxEncrypt",IDC_STATIC,1,369,402,44
+    EDITTEXT        IDC_EDIT_CyberX,72,377,327,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Encrypt",IDC_BUTTON_CyberX,1,378,50,14
+    PUSHBUTTON      "Decrypt",IDC_BUTTON_CyberXDecrypt,1,395,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Encrypt MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Encrypt\0"
+            VALUE "LegalCopyright", "Copyright (C) 2014\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Encrypt.EXE\0"
+            VALUE "ProductName", "Encrypt Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 248
+        BOTTOMMARGIN, 145
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            IDR_CTRL_A,             VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Encrypt..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Encrypt.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

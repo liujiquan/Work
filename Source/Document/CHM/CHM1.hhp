@@ -1,0 +1,19 @@
+[OPTIONS]
+Compatibility=1.1 Or later
+Default Window=Main
+Default topic=NewTopic2.htm
+Default font=Tahoma,8,1
+Contents file=CHM1.hhc
+Index file=CHM1.hhk
+Display compile progress=Yes
+Full-text search=Yes
+Language=0x804 Chinese (PRC)
+
+[WINDOWS]
+Main="","CHM1.hhc","CHM1.hhk","NewTopic2.htm","C:\Work\Source\Repository\Document\CHM\NewTopic.htm",,,,,0x20,180,0x104E,[80,60,720,540],0x0,0x0,,,,,0
+
+[FILES]
+AccountSetting.htm
+SendMail.htm
+SendMailprocess.htm
+SendMailTopic.htm

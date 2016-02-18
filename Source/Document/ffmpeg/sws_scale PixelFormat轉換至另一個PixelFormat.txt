@@ -1,0 +1,12 @@
+struct SwsContext *img_convert_ctx;
+img_convert_ctx = sws_getContext(in_width, in_height, PIX_FMT_YUV420P,	// 源 宽高PXIFORMAT
+				out_width, out_height, PIX_FMT_YUV420P, // 目标 宽高PXIFORMAT
+				SWS_POINT,				// 哪種scale的方法
+				NULL, NULL, NULL);
+sws_scale(img_convert_ctx, pMemFrame->data,	// data
+			pMemFrame->linesize,	// 每行大小
+			0, 			// 从0行开始
+			dwHeight,		// dwHeight行结束
+			pMainFrame->data,	// 输出data
+			pMainFrame->linesize);	// 输出每行大小
+sws_freeContext(img_convert_ctx);		// 释放资源

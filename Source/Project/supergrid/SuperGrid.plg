@@ -1,0 +1,72 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SuperGrid - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/SuperGrid.res" /d "_DEBUG" /d "_AFXDLL" "C:\Work\Source\Project\supergrid\SuperGrid.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP80D.tmp" with contents
+[
+/nologo /MDd /W4 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Debug/SuperGrid.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Work\Source\Project\supergrid\ComboInListView.cpp"
+"C:\Work\Source\Project\supergrid\ListEditCtrl.cpp"
+"C:\Work\Source\Project\supergrid\MainFrm.cpp"
+"C:\Work\Source\Project\supergrid\MySuperGrid.cpp"
+"C:\Work\Source\Project\supergrid\NewItem.cpp"
+"C:\Work\Source\Project\supergrid\SuperGrid.cpp"
+"C:\Work\Source\Project\supergrid\SuperGridCtrl.cpp"
+"C:\Work\Source\Project\supergrid\SuperGridDoc.cpp"
+"C:\Work\Source\Project\supergrid\SuperVw.cpp"
+"C:\Work\Source\Project\supergrid\TestTreeDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP80D.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP80E.tmp" with contents
+[
+/nologo /MDd /W4 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Debug/SuperGrid.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Work\Source\Project\supergrid\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP80E.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP80F.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/SuperGrid.pdb" /debug /machine:I386 /out:"Debug/SuperGrid.exe" /pdbtype:sept 
+.\Debug\ComboInListView.obj
+.\Debug\ListEditCtrl.obj
+.\Debug\MainFrm.obj
+.\Debug\MySuperGrid.obj
+.\Debug\NewItem.obj
+.\Debug\StdAfx.obj
+.\Debug\SuperGrid.obj
+.\Debug\SuperGridCtrl.obj
+.\Debug\SuperGridDoc.obj
+.\Debug\SuperVw.obj
+.\Debug\TestTreeDlg.obj
+.\Debug\SuperGrid.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP80F.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ComboInListView.cpp
+ListEditCtrl.cpp
+MainFrm.cpp
+MySuperGrid.cpp
+NewItem.cpp
+SuperGrid.cpp
+SuperGridCtrl.cpp
+SuperGridDoc.cpp
+SuperVw.cpp
+TestTreeDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+SuperGrid.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

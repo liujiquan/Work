@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FloppyWriter", "FloppyWriter.vcproj", "{6AA9F2D4-EA9E-448C-AE16-65FC070925A6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = FloppyWriter.vcproj
+		SccProjectName0 = \u0022$/MyBook/TOOLS/FloppyWriter\u0022,\u0020HKIAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6AA9F2D4-EA9E-448C-AE16-65FC070925A6}.Debug.ActiveCfg = Debug|Win32
+		{6AA9F2D4-EA9E-448C-AE16-65FC070925A6}.Debug.Build.0 = Debug|Win32
+		{6AA9F2D4-EA9E-448C-AE16-65FC070925A6}.Release.ActiveCfg = Release|Win32
+		{6AA9F2D4-EA9E-448C-AE16-65FC070925A6}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

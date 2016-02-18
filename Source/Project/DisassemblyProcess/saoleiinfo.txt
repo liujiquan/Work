@@ -1,0 +1,56 @@
+﻿imagebase :0x00000000ffce0000	
+rand: 27707	no
+rand: 2B19D
+rand: 2B1C7
+
+
+00000000FFD07641        FF15B1A6FDFF            call qword [rel 0x1cf8]:srand
+--27614
+00000000FFD07707        FF1553A6FDFF            call qword [rel 0x1d60]:rand //
+
+00000000FFD077C9        FF1529A5FDFF            call qword [rel 0x1cf8]:srand
+
+00000000FFD08E65        FF158D8EFDFF            call qword [rel 0x1cf8]:srand
+
+00000000FFD0AFA1        FF15516DFDFF            call qword [rel 0x1cf8]:srand
+
+00000000FFD0B19D        FF15BD6BFDFF            call qword [rel 0x1d60]:rand//
+
+---------------------------
+--2B134
+00000000FFD0B1C7        FF15936BFDFF            call qword [rel 0x1d60]:rand//
+
+00000000FFD0B2E5        FF15756AFDFF            call qword [rel 0x1d60]:rand
+
+00000000FFD0B315        FF15456AFDFF            call qword [rel 0x1d60]:rand
+
+--2B4A8
+00000000FFD0B539        FF152168FDFF            call qword [rel 0x1d60]:rand
+
+=-------
+2B9C4
+00000000FFD0B9E4        FF157663FDFF            call qword [rel 0x1d60]:rand
+
+00000000FFD0B9F2        FF156863FDFF            call qword [rel 0x1d60]:rand
+------------------------- 
+32954
+00000000FFD129A9        FF15B1F3FCFF            call qword [rel 0x1d60]:rand
+329CF
+00000000FFD129CF        FF158BF3FCFF            call qword [rel 0x1d60]:rand
+329F5
+00000000FFD129F5        FF1565F3FCFF            call qword [rel 0x1d60]:rand
+
+
+----------------------------------
+32C7F - 0x32a90
+00000000FFD07F84        448B4F18                mov r9d,[rdi+0x18]
+00000000FFD07F88        448B4714                mov r8d,[rdi+0x14]
+00000000FFD07F8C        8B5710                  mov edx,[rdi+0x10]
+00000000FFD07F8F        488BCB                  mov rcx,rbx
+00000000FFD07F92        C6470C00                mov byte [rdi+0xc],0x0
+00000000FFD07F96        E8F5AA0000              call qword 0x32a90
+--
+00000000FFD12C7F        FF15DBF0FCFF            call qword [rel 0x1d60]:rand
+
+32F16
+00000000FFD12F16        FF1544EEFCFF            call qword [rel 0x1d60]:rand

@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FloppyWriter - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/FloppyWriter.res" /d "_DEBUG" /d "_AFXDLL" "C:\Work\Source\Project\FloppyWriter\FloppyWriter.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP49.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/FloppyWriter.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\FloppyWriter\FloppyWriter.cpp"
+"C:\Work\Source\Project\FloppyWriter\FloppyWriterDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP49.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP4A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/FloppyWriter.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\FloppyWriter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP4A.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/FloppyWriter.pdb" /debug /machine:I386 /out:"Debug/FloppyWriter.exe" /pdbtype:sept  .\Debug\FloppyWriter.obj .\Debug\FloppyWriterDlg.obj .\Debug\StdAfx.obj .\Debug\FloppyWriter.res "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+FloppyWriter.cpp
+FloppyWriterDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+FloppyWriter.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

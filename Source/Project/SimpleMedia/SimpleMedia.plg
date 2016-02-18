@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SimpleMedia - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP73.tmp" with contents
+[
+/nologo /Zp1 /MDd /W3 /Gm /GX /ZI /Od /I "..\include\ffmpeg\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D inline=__inline /Fp"Debug/SimpleMedia.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\SimpleMedia\MediaUtil.cpp"
+"C:\Work\Source\Project\SimpleMedia\SimpleMediaDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP73.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP74.tmp" with contents
+[
+avcodec.lib avdevice.lib avfilter.lib avformat.lib avutil.lib postproc.lib swresample.lib swscale.lib SDL2.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/SimpleMedia.pdb" /debug /machine:I386 /out:"Debug/SimpleMedia.exe" /pdbtype:sept /libpath:"..\lib\ffmpeg\lib" 
+.\Debug\MediaUtil.obj
+.\Debug\SimpleMedia.obj
+.\Debug\SimpleMediaDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\SimpleMedia.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP74.tmp"
+<h3>Output Window</h3>
+Compiling...
+MediaUtil.cpp
+c:\work\source\project\simplemedia\mediautil.h(1) : warning C4117: macro name '__cplusplus' is reserved, '#undef' ignored
+c:\work\source\project\include\ffmpeg\include\libavutil\mem.h(97) : warning C4002: too many actual parameters for macro 'av_alloc_size'
+c:\work\source\project\include\ffmpeg\include\libavutil\mem.h(170) : warning C4002: too many actual parameters for macro 'av_alloc_size'
+c:\work\source\project\include\ffmpeg\include\libavutil\mem.h(189) : warning C4002: too many actual parameters for macro 'av_alloc_size'
+c:\work\source\project\include\ffmpeg\include\libavutil\mem.h(232) : warning C4002: too many actual parameters for macro 'av_alloc_size'
+SimpleMediaDlg.cpp
+c:\work\source\project\simplemedia\mediautil.h(1) : warning C4117: macro name '__cplusplus' is reserved, '#undef' ignored
+c:\work\source\project\include\ffmpeg\include\libavutil\mem.h(97) : warning C4002: too many actual parameters for macro 'av_alloc_size'
+c:\work\source\project\include\ffmpeg\include\libavutil\mem.h(170) : warning C4002: too many actual parameters for macro 'av_alloc_size'
+c:\work\source\project\include\ffmpeg\include\libavutil\mem.h(189) : warning C4002: too many actual parameters for macro 'av_alloc_size'
+c:\work\source\project\include\ffmpeg\include\libavutil\mem.h(232) : warning C4002: too many actual parameters for macro 'av_alloc_size'
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+SimpleMedia.exe - 0 error(s), 10 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,69 @@
+// Disassembly.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (Disassembly.tlb) that will become a resource in
+// Disassembly.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(E6E5A5F3-010C-41E5-A92D-DD88973CB801), version(1.0),
+  helpfile("Disassembly.hlp"),
+  helpstring("Disassembly ActiveX Control module"),
+  control ]
+library DISASSEMBLYLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CDisassemblyCtrl
+
+	[ uuid(5B75EFA2-8995-43E2-B6F8-DF15A4F96D1A),
+	  helpstring("Dispatch interface for Disassembly Control"), hidden ]
+	dispinterface _DDisassembly
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDisassemblyCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDisassemblyCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CDisassemblyCtrl
+
+	[ uuid(F26223ED-15C8-4420-B896-06B5AEFB3F04),
+	  helpstring("Event interface for Disassembly Control") ]
+	dispinterface _DDisassemblyEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CDisassemblyCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CDisassemblyCtrl
+
+	[ uuid(89A7CC2F-7A81-4039-A54B-36F279C29095),
+	  helpstring("Disassembly Control"), control ]
+	coclass Disassembly
+	{
+		[default] dispinterface _DDisassembly;
+		[default, source] dispinterface _DDisassemblyEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

@@ -1,0 +1,82 @@
+防止base64编码后的数据里面存在0
+
+1.首先需要建立目标邮件服务器的连接。
+
+2.如果是ESMTP需要用户认证则发送EHLO加程序标识串（可自定义）,如果不需要登录用HELO
+加程序标识串来需要身份验证。（ehlo是extend helo的缩写）
+
+3.发送AUTH LOGIN命令身份认证开始，用户名和密码需要使用base64编码
+
+4.发送MAIL FROM指明发送邮件的邮箱
+
+5.发送RCPT TO指明收信箱，如果需要多人接收邮件（包括抄送和密送），就发送多次此命令。
+6.发送DATA邮件正文开始
+
+7.发送From指明发件人，可以指名发件人的名字，格式如下 =?%s?B?%s?= <%s> 第一个%s是字符编码，第二个%s是名字的base64编码,第三个%s是邮箱地址
+
+8.发送To指明收信人，这里的地址必须是上面的RCPT TO的了集。可以指定名字，格式和From相同，如果有多个人用逗号隔开。
+
+9.发送Cc指明抄送，这里的地址必须是上面的RCPT TO的了集。可以指定名字，格式和From相同，如果有多个人用逗号隔开。
+
+10.发送Bcc指明密送，这里的地址必须是上面的RCPT TO的了集。可以指定名字，格式和From相同，如果有多个人用逗号隔开
+
+11.发送Date指明发信日期时间
+
+12.发送Subject发送标题
+
+13.发送X-Priority指明优先级
+
+14.发送X-Mailer说明当前客户端，可自定义
+
+15.发送mime-Version: 1.0指定MIME版本
+
+16.发送Message-ID指定消息ID
+
+17.发送Content-type定义了邮件中所含各种内容的类型以及相关属性，
+例如
+Content-type: multipart/mixed;boundary="#BOUNDARY#"代表下面的内容含有附件，boundary标识将附件内容同邮件其它内容分成不同的段
+Content-type:multipart/alternative;boundary="{分段标识}"类型，邮件通过其boundary中的分段标识将纯文本、超文本和邮件的其它内容分成不同的段
+Content-type:multipart/related; type="multipart/alternative";boundary="{分段标识}"类型,除了可以携带各种附件外，还可以将其它内容以内嵌资源的方式存储在邮件中
+邮件使用这些boundary中定义的字符串作为标识，将邮件内容分成不同的段，段体内的每个子段以“--”+boundary行开始，父段则以“--”+boundary+“--”行结束，不同段之间用空行分隔
+每个段中
+Content-type:text/plain; charset=utf-8代表是纯文本内容
+Content-type:text/html; charset=utf-8代表是网页内容
+Content-Type: application/octet-stream;charset=utf-8;name=""
+Content-Disposition: attachment; filename=""代表是附件
+ 
+18.发送Content-Transfer-Encoding:  base64指定正文的编码格式
+ 
+19.发送正文，以base64编码再分隔成长度为76的小块
+ 
+20.发送.\r\n邮件发送（有个英文句号哦）
+ 
+21.发送QUIT退出连接
+
+ 
+
+　
+SMTP
+
+SMTP
+[lix@nslix]$telnet smtp.163. com 25
+220 163 .com Anti-spam GT for Coremail System (163com[071018])
+HELO smtp.163 .com
+250 OK
+auth login
+334 dXNlcm5hbWU6
+USERbase64加密后的用户名
+334 UGFzc3dvcmQ6
+PASSbase64加密后的密码
+235 Authentication successful
+MAILFROM:XXX@163 .COM
+250 Mail OK
+RCPTTO:XXX@163 .COM
+250 Mail OK
+DATA
+354 End data with .
+QUIT
+SMTP
+
+SMTP
+250 Mail OK
+queued as smtp5,D9GowLArizfIFTpIxFX8AA==.41385S2

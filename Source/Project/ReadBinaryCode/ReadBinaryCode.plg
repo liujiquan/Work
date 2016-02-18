@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ReadBinaryCode - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/ReadBinaryCode.res" /d "_DEBUG" "C:\Work\Source\Project\ReadBinaryCode\ReadBinaryCode.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP71.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/ReadBinaryCode.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\ReadBinaryCode\ProcessInfo.cpp"
+"C:\Work\Source\Project\ReadBinaryCode\ReadBinaryCode.cpp"
+"C:\Work\Source\Project\ReadBinaryCode\ReadBinaryCodeDlg.cpp"
+"C:\Work\Source\Project\ReadBinaryCode\AccembFindDlg.cpp"
+"C:\Work\Source\Project\ReadBinaryCode\AssemblyDlg.cpp"
+"C:\Work\Source\Project\ReadBinaryCode\AssemGotoDlg.cpp"
+"C:\Work\Source\Project\ReadBinaryCode\DropFileEdit.cpp"
+"C:\Work\Source\Project\ReadBinaryCode\PEUtil.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP71.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP72.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/ReadBinaryCode.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\ReadBinaryCode\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP72.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP73.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\ReadBinaryCode\ntdll_interface.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP73.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP74.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ReadBinaryCode.pdb" /debug /machine:I386 /out:"Debug/ReadBinaryCode.exe" /pdbtype:sept 
+.\Debug\ProcessInfo.obj
+.\Debug\ReadBinaryCode.obj
+.\Debug\ReadBinaryCodeDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\AccembFindDlg.obj
+.\Debug\AssemblyDlg.obj
+.\Debug\AssemGotoDlg.obj
+.\Debug\DropFileEdit.obj
+.\Debug\PEUtil.obj
+.\Debug\ReadBinaryCode.res
+.\Debug\ntdll_interface.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP74.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP75.bat" with contents
+[
+@echo off
+copy Debug\ReadBinaryCode.exe  ..\Bin_debug
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP75.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ProcessInfo.cpp
+c:\work\source\project\readbinarycode\peutil.h(121) : warning C4018: '>=' : signed/unsigned mismatch
+ReadBinaryCode.cpp
+ReadBinaryCodeDlg.cpp
+c:\work\source\project\readbinarycode\peutil.h(121) : warning C4018: '>=' : signed/unsigned mismatch
+C:\Work\Source\Project\ReadBinaryCode\ReadBinaryCodeDlg.cpp(376) : warning C4018: '>' : signed/unsigned mismatch
+AccembFindDlg.cpp
+c:\work\source\project\readbinarycode\peutil.h(121) : warning C4018: '>=' : signed/unsigned mismatch
+AssemblyDlg.cpp
+c:\work\source\project\readbinarycode\peutil.h(121) : warning C4018: '>=' : signed/unsigned mismatch
+AssemGotoDlg.cpp
+DropFileEdit.cpp
+PEUtil.cpp
+c:\work\source\project\readbinarycode\peutil.h(121) : warning C4018: '>=' : signed/unsigned mismatch
+Generating Code...
+Compiling...
+ntdll_interface.cpp
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\ReadBinaryCode.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+ReadBinaryCode.exe - 0 error(s), 6 warning(s)
+</pre>
+</body>
+</html>

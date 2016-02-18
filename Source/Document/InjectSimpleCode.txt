@@ -1,0 +1,9 @@
+Note1：
+XP系統 函數地址不會變更
+WIN7系統每次重啟過後 函數地址會改變
+注意：每次重啟過後WIN7的InjectExe需要重新InjectCode
+
+Note2:
+DWORD dwVirtualAddress = PEAlign(sectionHeader.VirtualAddress+sectionHeader.Misc.VirtualSize, dwSectionAlignment);
+newSectionHeader.VirtualAddress = dwVirtualAddress; 
+VirtualAddress 必須 dwSectionAlignment的整數倍否則 報錯誤 [這不是一個win32程序]

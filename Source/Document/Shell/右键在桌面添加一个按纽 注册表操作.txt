@@ -1,0 +1,138 @@
+﻿在HKCR下 Directory/Backgroud/这个表示在桌面空白区域
+shell/添加子项  例如 “我的按纽”
+到桌面右键  查看 ，你会发现出现 “我的按纽”按纽 但是单击没有效果
+2：
+新建command子项  在默认项下输入 你要打开的exe或者其他程序
+新建icon 添加你自己的 图标
+
+
+1：
+[HKEY_CLASSES_ROOT\Directory\Background\shell\test] 
+1）右键桌面空白区域		 有效果
+2）右键文件夹			 无效果
+
+2
+[HKEY_CLASSES_ROOT\Directory\Background\shellex\Test]
+1）右键桌面空白区域 		无效果
+2）右键文件夹 			无效果
+
+3
+[HKEY_CLASSES_ROOT\Directory\shell\Test]
+1）右键桌面空白区域 		无效果
+2）右键文件夹 			有效果
+
+[HKEY_CLASSES_ROOT\Directory\shellex\test]
+1）右键桌面空白区域 		无效果
+2）右键文件夹 			无效果
+
+[HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\Test]
+1）右键桌面空白区域 		无效果
+2）右键文件夹 			无效果
+
+
+
+
+////////////////////////////
+[HKEY_CLASSES_ROOT\*\shell\test]	
+1）右键桌面空白区域 		无效果
+2）右键文件夹 			无效果
+3）右键文件 			有效果
+
+[HKEY_CLASSES_ROOT\*\shellex\test]	
+1）右键桌面空白区域 		无效果
+2）右键文件夹 			无效果
+3）右键文件 			无效果
+
+[HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\test]
+1）右键桌面空白区域 		无效果
+2）右键文件夹 			无效果
+3）右键文件 			无效果
+
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\UnlockerShellExtension]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\UnlockerShellExtension]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes\CLSID\UnlockerShellExtension]
+
+[HKEY_CLASSES_ROOT\Folder\ShellEx\ContextMenuHandlers\UnlockerShellExtension]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\ShellEx\ContextMenuHandlers\UnlockerShellExtension]
+
+
+
+
+20140429關於win7 64為操作系統 操作註冊表添加右鍵菜單的測試
+操作notepad對應文件 這註冊表是 txtfile 不是.txt textfile
+：123.txt 123.log
+1) 	.txt默認打開方式      非notepad.exe  FALSE
+	.log默認打開方式	notepad.exe  TRUE
+.rgs ->NoRemove txtfile  log有效果  txt無效果
+
+2) 	.txt默認打開方式	notepad.exe  TRUE
+	.log默認打開方式	notepad.exe  TRUE
+.rgs ->NoRemove txtfile  txt，log有效果
+
+查看註冊表
+HKEY_CLASSES_ROOT\.log 你會發現鍵值 正是 txtfile
+HKEY_CLASSES_ROOT\.txt 你會發現鍵值 正是 txtfile
+HKEY_CLASSES_ROOT\.scp 你會發現鍵值 正是 txtfile	
+
+1：	刪除效果改變
+HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\Register =	{04BCE245-0EAD-4F97-B56F-EB15A1F656AA}
+
+
+2	刪除效果改變
+[HKEY_CLASSES_ROOT\CLSID\{23170F69-40C1-278A-1000-000100020000}]
+[HKEY_CLASSES_ROOT\CLSID\{23170F69-40C1-278A-1000-000100020000}\InprocServer32]
+@="C:\\Program Files\\7-Zip\\7-zip.dll"
+"ThreadingModel"="Apartment"
+
+3：	刪除效果不變
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{23170F69-40C1-278A-1000-000100020000}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{23170F69-40C1-278A-1000-000100020000}\InprocServer32]
+@="C:\\Program Files\\7-Zip\\7-zip32.dll"
+"ThreadingModel"="Apartment"
+
+4：	刪除效果不變
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Cached]
+"{23170F69-40C1-278A-1000-000100020000} {000214E4-0000-0000-C000-000000000046} 0xFFFF"=hex:01,\
+
+5：	刪除效果改變
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\*\shellex\ContextMenuHandlers\7-Zip]
+@="{23170F69-40C1-278A-1000-000100020000}"
+
+6：	刪除效果改變
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{23170F69-40C1-278A-1000-000100020000}]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{23170F69-40C1-278A-1000-000100020000}\InprocServer32]
+@="C:\\Program Files\\7-Zip\\7-zip.dll"
+"ThreadingModel"="Apartment"
+
+7：	刪除效果不變
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\{23170F69-40C1-278A-1000-000100020000}]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\{23170F69-40C1-278A-1000-000100020000}\InprocServer32]
+@="C:\\Program Files\\7-Zip\\7-zip32.dll"
+"ThreadingModel"="Apartment"
+
+8：	刪除效果不變
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Components\96F071321C0420729003000030000068]
+"96F071321C0420729003000010000000"="22:\\Software\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Approved\\{23170F69-40C1-278A-1000-000100020000}"
+
+
+9：	刪除效果不變
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved]
+"{23170F69-40C1-278A-1000-000100020000}"="7-Zip Shell Extension"
+
+10：	刪除效果不變
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes\CLSID\{23170F69-40C1-278A-1000-000100020000}]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Classes\CLSID\{23170F69-40C1-278A-1000-000100020000}\InprocServer32]
+@="C:\\Program Files\\7-Zip\\7-zip32.dll"
+"ThreadingModel"="Apartment"
+
+
+11：	刪除效果不變
+[HKEY_USERS\S-1-5-21-1138124126-685323672-483988704-14440\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Cached]
+
+"{23170F69-40C1-278A-1000-000100020000} {000214E4-0000-0000-C000-000000000046} 0xFFFF"=hex:01,\
+  00,00,00,00,00,00,00,1c,36,9d,ed,a2,ff,ce,01

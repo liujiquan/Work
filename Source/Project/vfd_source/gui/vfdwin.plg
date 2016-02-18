@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: lib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP18.bat" with contents
+[
+@echo off
+mc vfdmsg
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP18.bat"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP19.bat" with contents
+[
+@echo off
+rc /fo".\Debug\vfdlib.res" /i "../inc" /d "_DEBUG" .\vfdlib.rs
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP19.bat"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1A.tmp" with contents
+[
+/nologo /MTd /W4 /Gm /GX /Zi /Od /I "../inc" /I "../zlib" /D "_DEBUG" /D "_WINDOWS" /D "WIN32" /D "_USRDLL" /D "LIB_EXPORTS" /D "_MBCS" /D _WIN32_WINNT=0x500 /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\vfd_source\lib\vfdguiopen.c"
+"C:\Work\Source\Project\vfd_source\lib\vfdguisave.c"
+"C:\Work\Source\Project\vfd_source\lib\vfdguitip.c"
+"C:\Work\Source\Project\vfd_source\lib\vfdguiut.c"
+"C:\Work\Source\Project\vfd_source\lib\vfdshcfact.cpp"
+"C:\Work\Source\Project\vfd_source\lib\vfdshext.cpp"
+"C:\Work\Source\Project\vfd_source\lib\vfdshmenu.cpp"
+"C:\Work\Source\Project\vfd_source\lib\vfdshprop.cpp"
+"C:\Work\Source\Project\vfd_source\lib\vfdshutil.cpp"
+"C:\Work\Source\Project\vfd_source\lib\vfdctl.c"
+"C:\Work\Source\Project\vfd_source\lib\vfdfat.c"
+"C:\Work\Source\Project\vfd_source\lib\vfdlib.c"
+"C:\Work\Source\Project\vfd_source\lib\vfdzip.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1A.tmp" 
+Compiling Message - .\vfdmsg.mc
+MC: Compiling vfdmsg.mc
+Compiling Resource - .\vfdlib.rs
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1B.tmp" with contents
+[
+zlibstat.lib psapi.lib version.lib advapi32.lib comctl32.lib comdlg32.lib gdi32.lib ole32.lib shell32.lib user32.lib /nologo /dll /pdb:none /debug /machine:I386 /nodefaultlib:"libc" /def:".\vfdlib.def" /out:"Debug/vfd.dll" /implib:"Debug/vfd.lib" /libpath:"../zlib" 
+.\Debug\vfdguiopen.obj
+.\Debug\vfdguisave.obj
+.\Debug\vfdguitip.obj
+.\Debug\vfdguiut.obj
+.\Debug\vfdshcfact.obj
+.\Debug\vfdshext.obj
+.\Debug\vfdshmenu.obj
+.\Debug\vfdshprop.obj
+.\Debug\vfdshutil.obj
+.\Debug\vfdctl.obj
+.\Debug\vfdfat.obj
+.\Debug\vfdlib.obj
+.\Debug\vfdzip.obj
+.\Debug\vfdlib.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1B.tmp"
+<h3>Output Window</h3>
+Compiling...
+vfdguiopen.c
+C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\shellapi.h(383) : warning C4201: nonstandard extension used : nameless struct/union
+C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\shellapi.h(422) : warning C4201: nonstandard extension used : nameless struct/union
+C:\Work\Source\Project\vfd_source\lib\vfdguiopen.c(546) : warning C4505: 'OnDiskType' : unreferenced local function has been removed
+        C:\Work\Source\Project\vfd_source\lib\vfdguiopen.c(55) : see declaration of 'OnDiskType'
+C:\Work\Source\Project\vfd_source\lib\vfdguiopen.c(546) : warning C4505: 'OnProtect' : unreferenced local function has been removed
+        C:\Work\Source\Project\vfd_source\lib\vfdguiopen.c(57) : see declaration of 'OnProtect'
+vfdguisave.c
+vfdguitip.c
+vfdguiut.c
+Generating Code...
+Compiling...
+vfdshcfact.cpp
+vfdshext.cpp
+vfdshmenu.cpp
+vfdshprop.cpp
+vfdshutil.cpp
+Generating Code...
+Compiling...
+vfdctl.c
+vfdfat.c
+vfdlib.c
+C:\Work\Source\Project\vfd_source\lib\vfdlib.c(20) : fatal error C1083: Cannot open include file: 'psapi.h': No such file or directory
+vfdzip.c
+Generating Code...
+ZIP image support is disabled.
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+vfdwin.exe - 1 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

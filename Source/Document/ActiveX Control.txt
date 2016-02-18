@@ -1,0 +1,38 @@
+1： 象素转真实值 
+m_Width：300 cxPPI：96 
+m_cxExtent=300×2500/96
+SetInitialSize(m_Width, m_Height); 设置初始化大小
+{
+	m_cxExtent = szlHimetric.cx;
+	m_cyExtent = szlHimetric.cy;
+}
+SetControlSize(m_Width, m_Height); 设置OLE控件大小
+{
+	m_xOleObject.SetExtent(DVASPECT_CONTENT, &szlHimetric)
+}
+
+
+//	OnSetExtent(NULL);
+//	this->m_pInPlaceSite->OnPosRectChange(CRect(0, 0, m_Width, m_Height));  
+//	Invalidate();
+
+
+2：拖拉控件改变大小-》WM_SIZE
+OnSize事件
+SetControlSize(m_Width, m_Height);
+
+3：设置Width Invoke
+自动触发SetWidth函数 -》再触发WM_SIZE事件
+
+
+改变流程-》
+发 this.SetWidth->
+	this.SetControlSize->
+	m_xOleObject.SetExtent->
+	pThis->OnSetExtent
+	{
+		SetModifiedFlag();
+		InvalidateControl();
+		m_pInPlaceSite->OnPosRectChange
+	}
+	其中>m_pInPlaceSite->OnPosRectChange-》WM_SIZE

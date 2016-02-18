@@ -1,0 +1,30 @@
+<html><head></head><body>
+<OBJECT type="text/site properties"><param name="Window Styles" value="0x227"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap">
+<PARAM NAME="Name" VALUE="Setting">
+<PARAM NAME="Local" VALUE="SendMailTopic.htm">
+<PARAM NAME="ImageNumber" value="2">
+</OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap">
+<PARAM NAME="Name" VALUE="SendMailprocess">
+<PARAM NAME="Local" VALUE="C:\Work\Source\Repository\Document\CHM\SendMailprocess.htm">
+<PARAM NAME="ImageNumber" value="11">
+</OBJECT>
+</UL>
+<UL>
+<LI><OBJECT TYPE="text/sitemap">
+<PARAM NAME="Name" VALUE="SimpleMail">
+<PARAM NAME="Local" VALUE="AccountSetting.htm">
+<PARAM NAME="ImageNumber" value="11">
+</OBJECT>
+</UL>
+<UL>
+<LI><OBJECT TYPE="text/sitemap">
+<PARAM NAME="Name" VALUE="SendMail">
+<PARAM NAME="Local" VALUE="SendMail.htm">
+<PARAM NAME="ImageNumber" value="11">
+</OBJECT>
+</UL>
+</UL></body></html>

@@ -1,0 +1,24 @@
+电脑开机后，开始启动BIOS，开始BIOS自检。
+
+通过自检后，bios找到硬盘上的主引导记录MBR.
+
+MBR开始读取硬盘分区表DPT，找到活动分区，找到活动分区中的分区引导记录PBR，并且把控制权交给PBR.
+
+PBR搜索活动区中的启动管理器bootmgr，找到后，PBR把控制权交给bootmgr(相当于xp里的ntldr文件)。
+
+Bootmgr寻找活动分区中的boot文件夹中的BCD文件（启动配置数据，相当于xp里的boot.ini文件）。
+
+找到BCD后，Bootmgr首先从BCD 中读取启动管理器bootmgr菜单的语言版本信息，然后再调用BOOTMGR与相应语言的BOOTMGR.EXE.MUI （在boot文件夹对应语言文件夹中）组成相应语言的启动菜单，之后在显示器上显示多操作系统选择画面。
+
+如果存在多个操作系统而且系统设置的等待时间不是0，那么屏幕就显示多个操作系统的选择界面。如果没有多系统，那么直接进入windows 7系统，不显示选择界面。
+8
+
+选择windows 7系统后，bootmgr就会读取BCD里win7系统所在的盘里的windows\system32\winload.exe文件，并且将控制权交给 winload.exe。
+9
+
+Winload.exe加载windows7内核、硬件、服务等，之后加载桌面等信息，从而启动整个windows 7系统。
+10
+
+上面几步可以概括一下就是：
+
+BIOS--MBR--DPT--PBR--Bootmgr--BCD--系统选择界面---选择windows7------Winload.exe----内核加载等 --启动整个windows7系统 （这里只讲win7）

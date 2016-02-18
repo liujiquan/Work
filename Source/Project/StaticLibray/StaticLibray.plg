@@ -1,0 +1,153 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: StaticLibray - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1715.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/StaticLibray.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\StaticLibray\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1715.tmp" 
+Creating command line "link.exe -lib /nologo /out:"Release\StaticLibray.lib"  .\Release\StdAfx.obj "
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1716.bat" with contents
+[
+@echo off
+copy Release\StaticLibray.lib  ..\Lib
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1716.bat"
+Compiling...
+StdAfx.cpp
+Creating library...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Release\StaticLibray.lib
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+StaticLibray.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: StaticLibray - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1717.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/StaticLibray.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"C:\Work\Source\Project\StaticLibray\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1717.tmp" 
+Creating command line "link.exe -lib /nologo /out:"Debug\StaticLibray.lib"  .\Debug\StdAfx.obj "
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1718.bat" with contents
+[
+@echo off
+copy Debug\StaticLibray.lib  ..\Lib_debug
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1718.bat"
+Compiling...
+StdAfx.cpp
+Creating library...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\StaticLibray.lib
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+StaticLibray.lib - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: SharedDll - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1719.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "SHAREDDLL_EXPORTS" /Fp"Release/SharedDll.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\StaticLibray\SharedDll\SharedDll.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1719.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP171A.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "SHAREDDLL_EXPORTS" /Fp"Release/SharedDll.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\StaticLibray\SharedDll\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP171A.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP171B.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/SharedDll.pdb" /machine:I386 /out:"Release/SharedDll.dll" /implib:"Release/SharedDll.lib" 
+.\Release\StdAfx.obj
+.\Release\SharedDll.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP171B.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP171C.bat" with contents
+[
+@echo off
+copy Release\SharedDll.dll  ..\..\BIn
+copy Release\SharedDll.lib  ..\..\Lib
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP171C.bat"
+Compiling...
+StdAfx.cpp
+Compiling...
+SharedDll.cpp
+Linking...
+   Creating library Release/SharedDll.lib and object Release/SharedDll.exp
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Release\SharedDll.dll
+        1 file(s) copied.
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+SharedDll.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: SharedDll - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1720.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "SHAREDDLL_EXPORTS" /Fp"Debug/SharedDll.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"C:\Work\Source\Project\StaticLibray\SharedDll\SharedDll.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1720.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1721.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "SHAREDDLL_EXPORTS" /Fp"Debug/SharedDll.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"C:\Work\Source\Project\StaticLibray\SharedDll\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1721.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1722.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/SharedDll.pdb" /debug /machine:I386 /out:"Debug/SharedDll.dll" /implib:"Debug/SharedDll.lib" /pdbtype:sept 
+.\Debug\StdAfx.obj
+.\Debug\SharedDll.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1722.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1723.bat" with contents
+[
+@echo off
+copy Debug\SharedDll.dll  ..\..\Bin_debug
+copy Debug\SharedDll.lib  ..\..\Lib_debug
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1723.bat"
+Compiling...
+StdAfx.cpp
+Compiling...
+SharedDll.cpp
+Linking...
+   Creating library Debug/SharedDll.lib and object Debug/SharedDll.exp
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\SharedDll.dll
+        1 file(s) copied.
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+SharedDll.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

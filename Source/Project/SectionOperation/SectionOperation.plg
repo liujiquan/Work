@@ -1,0 +1,95 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SectionOperation - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/SectionOperation.res" /d "NDEBUG" /d "_AFXDLL" "C:\Work\Source\Project\SectionOperation\SectionOperation.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP113.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/SectionOperation.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\SectionOperation\SectionOperation.cpp"
+"C:\Work\Source\Project\SectionOperation\SectionOperationDlg.cpp"
+"C:\Work\Source\Project\SectionOperation\_SectionUtil.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP113.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP114.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/SectionOperation.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\SectionOperation\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP114.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP115.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/SectionOperation.pdb" /machine:I386 /out:"Release/SectionOperation.exe" 
+.\Release\SectionOperation.obj
+.\Release\SectionOperationDlg.obj
+.\Release\StdAfx.obj
+.\Release\_SectionUtil.obj
+.\Release\SectionOperation.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP115.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+SectionOperation.cpp
+SectionOperationDlg.cpp
+_SectionUtil.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+SectionOperation.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: SectionOperation - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/SectionOperation.res" /d "_DEBUG" /d "_AFXDLL" "C:\Work\Source\Project\SectionOperation\SectionOperation.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP117.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/SectionOperation.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\SectionOperation\SectionOperation.cpp"
+"C:\Work\Source\Project\SectionOperation\SectionOperationDlg.cpp"
+"C:\Work\Source\Project\SectionOperation\_SectionUtil.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP117.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP118.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/SectionOperation.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\SectionOperation\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP118.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP119.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/SectionOperation.pdb" /debug /machine:I386 /out:"Debug/SectionOperation.exe" /pdbtype:sept 
+.\Debug\SectionOperation.obj
+.\Debug\SectionOperationDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\_SectionUtil.obj
+.\Debug\SectionOperation.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP119.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+SectionOperation.cpp
+SectionOperationDlg.cpp
+_SectionUtil.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+SectionOperation.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

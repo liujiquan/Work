@@ -1,0 +1,77 @@
+﻿//作用 吧我們寫的atl和文件或者文件夾或者其他的 相關聯
+
+HKCR	//註釋：表示  HKEY_CLASSES_ROOT
+{
+	SimpleExt.ISimpleShlExt.1 = s 'ISimpleShlExt Class'
+	{
+		CLSID = s '{C30BFB73-5940-4AC1-B903-1D0611974F5C}'
+	}
+	SimpleExt.ISimpleShlExt = s 'ISimpleShlExt Class'
+	{
+		CLSID = s '{C30BFB73-5940-4AC1-B903-1D0611974F5C}'
+		CurVer = s 'SimpleExt.ISimpleShlExt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C30BFB73-5940-4AC1-B903-1D0611974F5C} = s 'ISimpleShlExt Class'
+		{
+			ProgID = s 'SimpleExt.ISimpleShlExt.1'
+			VersionIndependentProgID = s 'SimpleExt.ISimpleShlExt'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{05B4C122-67F7-4C38-A691-080368137EE7}'
+		}
+	}
+	 NoRemove txtfile//表示子項 txtfile/ShellEx/ContextMenuHandlers/SimpleExt
+   	 {
+        NoRemove ShellEx	NoRemove表示如果存在這個項 不能被刪除
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove SimpleExt = s '{C30BFB73-5940-4AC1-B903-1D0611974F5C}'
+            }	ForceRemove表示如果存在這個項就覆蓋
+        }
+    }
+}
+
+2：防止扩展的如果他们不认可清单加载。
+
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved
+
+HKLM
+{
+   NoRemove Software
+    {
+		NoRemove Microsoft
+		{
+			NoRemove Windows
+			{ 
+				NoRemove CurrentVersion
+				{ 
+					NoRemove Shell Extensions
+					{ 
+						NoRemove Approved
+						{ 
+							ForceRemove {C30BFB73-5940-4AC1-B903-1D0611974F5C} = s 'SimpleExt Shell Shell Extension'
+						}
+					}
+				}
+			}
+		}
+    }
+}
+
+
+From: http://community.csdn.net/expert/Topicview2.asp?id=4853965
+
+A:There are two <comdef.h> header files in VC.NET, one in Vc7/include and the other in Vc7/PlatformSDK/include. The former splits off the smart pointer typedefs into comdefsp.h, and it doesn't include IContextMenu. The latter does. You can try to #include the PlatformSDK header directly, change your INCLUDE path order, or supply the missing typedef yourself, e.g.
+
+struct __declspec(uuid("000214e4-0000-0000-c000-000000000046"))
+IContextMenu;
+
+
+_COM_SMARTPTR_TYPEDEF(IContextMenu, __uuidof(IContextMenu)); 

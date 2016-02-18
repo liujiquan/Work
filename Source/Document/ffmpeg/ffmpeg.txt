@@ -1,0 +1,8 @@
+学习网站：
+http://10.10.1.67/CyberX/123.avi
+http://10.10.1.67/CyberX/amano.asf
+
+
+http://www.colabug.com/thread-1091239-1-1.html
+ffmpeg.exe：编码
+ffplay.exe：播放视频 控制视频

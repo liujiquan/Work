@@ -1,0 +1,5 @@
+WebSockClient.asp, WebSockClientá`–Ê
+WebSockServer.asp, WebSockServerá`–Ê
+base21.asp, Basp21á`–Ê
+WebSendMail.asp, SendMail
+baiduDemo1.asp, baiduDemo1‘ªŽŽ”Â

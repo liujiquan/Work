@@ -1,0 +1,16 @@
+◆start 
+DGENGTBL_DAT.csv 
+ユーザー 'amano_getuser' はログインできませんでした。
+このログインで要求されたデータベース "T00014" を開けません。ログインに失敗しました。
+SQLState = 37000, NativeError = 4060
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]このログインで要求されたデータベース "T00014" を開けません。ログインに失敗しました。
+SQLState = 28000, NativeError = 18456
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]ユーザー 'amano_getuser' はログインできませんでした。
+DGENGTB2_DAT.csv 
+ユーザー 'amano_getuser' はログインできませんでした。
+このログインで要求されたデータベース "T00014" を開けません。ログインに失敗しました。
+SQLState = 37000, NativeError = 4060
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]このログインで要求されたデータベース "T00014" を開けません。ログインに失敗しました。
+SQLState = 28000, NativeError = 18456
+Error = [Microsoft][SQL Server Native Client 10.0][SQL Server]ユーザー 'amano_getuser' はログインできませんでした。
+◆end 

@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PEInjectDemo - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP67B.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/PEInjectDemo.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP67B.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/PEInjectDemo.pdb" /debug /machine:I386 /out:"Debug/PEInjectDemo.exe" /pdbtype:sept  .\Debug\PEInjectDemo.obj .\Debug\PEInjectDemoDlg.obj .\Debug\StdAfx.obj .\Debug\PEInjectDemo.res "
+<h3>Output Window</h3>
+Compiling...
+PEInjectDemoDlg.cpp
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(98) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(98) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(101) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(101) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(101) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(101) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(102) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(102) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(102) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(102) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(104) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(104) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(107) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(107) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(113) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(113) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(113) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(113) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(114) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(114) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(115) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(115) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(116) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(116) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(117) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(117) : warning C4309: 'initializing' : truncation of constant value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(162) : warning C4035: 'OnInitDialog' : no return value
+C:\Work\Source\Project\PEInjectDemo\PEInjectDemoDlg.cpp(170) : warning C4035: 'OnInitDialog' : no return value
+Linking...
+
+
+
+<h3>Results</h3>
+PEInjectDemo.exe - 0 error(s), 30 warning(s)
+</pre>
+</body>
+</html>

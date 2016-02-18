@@ -1,0 +1,23 @@
+     1                                  bits 32
+     2 00000000 E80B000000              call func0
+     3 00000005 7573657233322E646C-         db 'user32.dll',0
+     4 0000000E 6C00               
+     5                                  func0 :
+     6 00000010 B8781D807C                  mov eax,7C801D78H   ;LOADLIBRARY
+     7 00000015 FFD0                        CALL eax
+     8 00000017 6A00                        push 0
+     9 00000019 E80B000000                  call Func1
+    10 0000001E 496E666F6D6174696F-         db "Infomation",0
+    11 00000027 6E00               
+    12                                  Func1:
+    13 00000029 E81C000000                  call Func2
+    14 0000002E 546869732065786520-         db "This exe was Injected Code.",0
+    15 00000037 77617320496E6A6563-
+    16 00000040 74656420436F64652E-
+    17 00000049 00                 
+    18                                  Func2:
+    19 0000004A 6A00                        push 0  
+    20 0000004C B8EA07D577                  mov eax,77D507EAH  ; 77D507EAH  MESSAGEBOXA
+    21 00000051 FFD0                        call eax
+    22 00000053 B8501F4000                  mov eax,00401f50H  ;  01012475H  
+    23 00000058 FFE0                        jmp eax

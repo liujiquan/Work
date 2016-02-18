@@ -1,0 +1,16 @@
+copy Debug\$(TargetName).dll  ..\Bin_debug
+copy Debug\$(TargetName).lib  ..\Lib_debug
+
+
+..\Bin_debug\$(TargetName).dll 
+..\Lib_debug\$(TargetName).lib
+
+copy Debug\$(TargetName).exe  ..\Bin_debug
+..\Bin_debug\$(TargetName).exe
+
+
+C:\Documents and Settings\XPMUser\Desktop\123.txt
+
+
+copy Debug\$(TargetName).exe  ..\Bin_debug
+..\Bin_debug\$(TargetName).exe

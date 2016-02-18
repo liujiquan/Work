@@ -1,0 +1,328 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "winver.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Englisch (USA) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""winver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPLICATION_ICON    ICON    DISCARDABLE     "wingui.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR_INACTIVE    BITMAP  DISCARDABLE     "inactive.bmp"
+IDB_TOOLBAR_NOTPRESSED  BITMAP  DISCARDABLE     "notpressed.bmp"
+IDB_TOOLBAR_PRESSED     BITMAP  DISCARDABLE     "pressed.bmp"
+IDB_ASFRECORDER         BITMAP  DISCARDABLE     "asfrecorder.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Open &Media file...",         ID_FILE_OPEN
+        MENUITEM "Open &URL...",                ID_URL_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Media"
+    BEGIN
+        MENUITEM "&Play",                       ID_MEDIA_PLAY
+        MENUITEM "&Pause",                      ID_MEDIA_PAUSE
+        MENUITEM "&Stop",                       ID_MEDIA_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "&Eject",                      ID_MEDIA_EJECT
+    END
+    POPUP "Stream"
+    BEGIN
+        MENUITEM "&Preview",                    ID_STREAM_PREVIEW
+        MENUITEM "&Cancel Transfer",            ID_STREAM_CANCEL
+    END
+    POPUP "&Settings"
+    BEGIN
+        MENUITEM "&Proxy Server",               ID_PROXY_SERVER
+        MENUITEM SEPARATOR
+        MENUITEM "&Register ASX file types",    ID_SETTINGS_REGISTERFILETYPES
+
+        MENUITEM "&Unregister ASX file types",  ID_SETTINGS_UNREGISTERFILETYPES
+
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ASFRecorder...",       ID_HELP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Program Arguments",          ID_PROGRAM_ARGUMENTS
+        MENUITEM SEPARATOR
+        MENUITEM "Show &Readme-File",           ID_SHOW_README
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 304, 239
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ASFRecorder"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "ASFRecorder Bitmap",IDC_ASFRECORDER_BITMAP,"Static",
+                    SS_OWNERDRAW,10,10,97,69
+    LTEXT           "ASFRecorder V1.1 with GUI for Microsoft Windows",
+                    IDC_STATIC,117,10,173,8
+    LTEXT           "and a DirectShow/ActiveMovie based stream preview",
+                    IDC_STATIC,117,20,174,10
+    LTEXT           "This program compiles on SunOS, Linux, and Windows",
+                    IDC_STATIC,117,35,174,8
+    LTEXT           "Full source code is included in my original release.",
+                    IDC_STATIC,118,45,174,8
+    LTEXT           "Distribute, modify or enhance at will. This program has",
+                    IDC_STATIC,118,61,174,8
+    LTEXT           "NO licensing conditions at all (absolutely freeware).",
+                    IDC_STATIC,118,72,174,8
+    LTEXT           "The program author wants to remain anonymous. This program is meant to demonstrate",
+                    IDC_STATIC,9,90,285,8
+    LTEXT           "that content providers should use digital rights management for all copyrighted content.",
+                    IDC_STATIC,10,101,281,8
+    LTEXT           "Currently they (technically) allow users to create a perfect digital copy of this content. But",
+                    IDC_STATIC,10,112,281,8
+    LTEXT           "for this they have no license (for example from the copyright holders in the music industry).",
+                    IDC_STATIC,10,123,281,8
+    LTEXT           "NO FURTHER PROGRAM RELEASES WILL FOLLOW. THIS PROJECT IS CANCELLED!",
+                    IDC_STATIC,10,140,289,8
+    LTEXT           "The program's home page is available on four mirrors:",
+                    IDC_STATIC,62,161,167,8
+    LTEXT           "http://asfrecorder.virtualave.net",IDC_STATIC,11,176,
+                    105,8
+    LTEXT           "http://members.nbci.com/asfrecorder",IDC_STATIC,161,176,
+                    122,8
+    LTEXT           "http://www.geocities.com/asfrecorder",IDC_STATIC,11,187,
+                    130,8
+    LTEXT           "http://asfrecorder.tripod.com",IDC_STATIC,161,187,130,8
+    LTEXT           "Discuss about the program on:                           http://pub18.ezboard.com/basfrecorder",
+                    IDC_STATIC,11,203,283,8
+    DEFPUSHBUTTON   "Great! Let's stream!",IDOK,102,220,94,14,WS_GROUP
+END
+
+IDD_OPEN_URL DIALOG DISCARDABLE  34, 22, 330, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open URL..."
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            IDI_APPLICATION_ICON,IDC_STATIC,10,10,20,20
+    LTEXT           "Type the reference URL of a movie or audio stream (ASF, WMA, WMV)",
+                    IDC_STATIC,40,10,247,8
+    LTEXT           "or a Windows Media redirector file (ASX, WMX, WVX)",
+                    IDC_STATIC,40,20,247,10
+    LTEXT           "Valid URLs can start with http:// or mms:// - Protocol may also be omitted.",
+                    IDC_STATIC,41,33,252,8
+    LTEXT           "&Open:",IDC_STATIC,13,56,26,8
+    COMBOBOX        IDC_URLCOMBO,40,54,278,89,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,188,79,61,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,256,79,61,14,WS_GROUP
+END
+
+IDD_ENTER_PASSWORD DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Authorization required"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_USERNAME_EDIT,57,17,110,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD_EDIT,57,45,110,15,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,113,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,22,74,50,14
+    LTEXT           "Password:",IDC_STATIC,16,47,34,8
+    LTEXT           "Username:",IDC_STATIC,16,20,35,8
+END
+
+IDD_PROXY_SERVER DIALOG DISCARDABLE  0, 0, 298, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Use Proxy Server"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PROXY_SERVER_EDIT,37,17,173,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROXY_PORT_EDIT,245,17,38,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,235,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,175,42,50,14
+    LTEXT           "Proxy",IDC_STATIC,14,19,18,8
+    LTEXT           "Port",IDC_STATIC,224,19,14,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,0
+ PRODUCTVERSION 1,1,0,0
+ FILEFLAGSMASK 0x30003fL
+#ifdef _DEBUG
+ FILEFLAGS 0xbL
+#else
+ FILEFLAGS 0xaL
+#endif
+ FILEOS 0x10001L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "ASFRecorder", "ASFRecorder\0"
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "pure streamin' fun!\0"
+            VALUE "FileDescription", "ASFRecorder\0"
+            VALUE "FileVersion", "1.1\0"
+            VALUE "InternalName", "ASFRecorder.exe\0"
+            VALUE "LegalCopyright", "No Copyright. Freely distributable.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ASFRecorder.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ASFRecorder\0"
+            VALUE "ProductVersion", "1.1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ENTER_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PROXY_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 56
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CANT_INIT_QUARTZ    "Sorry, the Quartz core components failed to initalise."
+    IDS_CANT_RENDER_FILE    "Sorry, I do not know how to play this file."
+    IDS_CANT_PLAY           "This file refuses to play!"
+    IDS_CANT_PAUSE          "This file refuses to pause!"
+    IDS_CANT_STOP           "This file refuses to stop playing!"
+    IDS_REALLY_QUIT         "Transmission in progress!\n\nQuitting the program now will\nterminate the transmission.\n\nDo you want to quit?"
+    IDS_TRANSMISSION_RUNNING "There is currently a transmission in progress."
+    IDS_CANT_SEEK           "Unable to seek in this file!"
+    IDS_REGISTERED          "The ASX, WAX, WVX and WMX filetypes\nhave been registered successfully!"
+    IDS_UNREGISTERED        "The ASX, WAX, WVX and WMX filetypes\nhave been unregistered successfully!"
+    IDS_ALREADYREGISTERED   "File types have have already been registered by this program!"
+    IDS_NOTREGISTERED       "File types have not yet been registered by this program!"
+    IDS_DROP_ONLY_ONE       "Please drop only on file at a time onto this window. Thanks!"
+END
+
+#endif    // Englisch (USA) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

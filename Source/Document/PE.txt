@@ -1,0 +1,46 @@
+ImageBase:exe加载运行时内存加载的基础地址
+AddressOfEntryPoint:代码执行初地址
+SizeofImage:exe运行时内存 Image大小
+
+运行时内存在：
+[ImageBase，ImageBase+SizeofImage)区间
+
+01000000 01000000+20000
+
+EXE Info比较Exe运行时内存Info
+TextSection有些许不一样 内存中会加载多数据
+
+
+
+[__imp__GlobalFree@4 (0041d668)]
+0C417 		.obj
+4F893		.ilk
+1DC96		.exe
+4F893-C417 = 0x0004347c		
+	0x003ff9d2
+__imp__CloseHandle@4 (0041d61c)]
+CEEE			.obj
+4FBFE			.ilk
+4FBFE-CEEE = 0x00042d10
+1DD30		.exe
+0041d61c - 1DD30= 			0x003ff8ec
+__imp__GetFileSize@8 (0041d620)]
+CF03			.obj
+4FC13			.ilk
+4FC13-CF03 = 0x00042d10			0x003ff8e2
+1DD3E
+[__imp__SetFilePointer@16 (0041d618)]
+CE5A
+4FBB5
+4FBB5-CE5A = 0x00042d5b
+1DD1E
+ [__imp__GlobalAlloc@8 (0041d614)]
+CE45
+4FBA0
+4FBA0-CE45 = 0x00042d5b
+1DD10
+[__imp__ReadFile@20 (0041d610)]
+CE32
+4FB8D
+4FB8D-CE32 = 0x00042d5b
+1DD04

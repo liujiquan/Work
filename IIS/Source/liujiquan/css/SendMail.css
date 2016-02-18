@@ -1,0 +1,53 @@
+/*-----------------------------------------
+  Body css style
+-----------------------------------------*/	
+body#background
+		{
+			background:url(../images/background1.gif);	
+		}		
+/*-----------------------------------------
+  Server Div css style
+-----------------------------------------*/
+div#container	
+		{
+			width:700px;
+			height:400px;
+		}
+div#MaiInfoDiv
+		{
+			width:570px;
+			height:200px;
+			float:left;
+		}
+div#MaiInfoDiv input
+		{
+			width:200px;
+		}
+div#MaiInfoDiv textarea
+		{
+			width:200px;
+			height:28px;
+		}
+		 
+div#SendTextDiv
+		{
+			width:570px;
+			height:175px;
+			float:left;
+		}
+div#SendFileDiv
+		{
+			width:570px;
+			height:200px;
+			float:left;
+		}
+div#SendFileDiv table
+		{
+			border:1;
+		}
+div#SendButtonDiv 
+		{
+			width:600px;
+			float:left;
+		}
+				

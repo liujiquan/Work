@@ -1,0 +1,8 @@
+error1:
+Source:
+lstrcpyA(accountInfo.strRecvServer, (_bstr_t)value); 
+Error:ZowSendMailDoc.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: int __thiscall CAdoDBRecordSet::SetTableName(class ATL::CStringT<unsigned short,class StrTraitMFC_DLL<unsigned short,class ATL::ChTraitsCRT<unsigned short> > >)" (__imp_?SetTableName@CAdoDBRecordSet@@QAEHV?$CStringT@GV?$StrTraitMFC_DLL@GV?$ChTraitsCRT@G@ATL@@@@@ATL@@@Z)
+1>ZowSendMailDoc.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class _variant_t __thiscall CAdoDBRecordSet::GetFiledValue(class ATL::CStringT<unsigned short,class StrTraitMFC_DLL<unsigned short,class ATL::ChTraitsCRT<unsigned short> > >)" (__imp_?GetFiledValue@CAdoDBRecordSet@@QAE?AV_variant_t@@V?$CStringT@GV?$StrTraitMFC_DLL@GV?$ChTraitsCRT@G@ATL@@@@@ATL@@@Z)
+1>
+添加lib Comsupp.lib引用
+https://msdn.microsoft.com/en-us/library/ewezf1f6%28VS.90%29.aspx

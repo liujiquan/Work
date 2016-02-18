@@ -1,0 +1,16 @@
+git.exe clone      --progress -v  "//tsclient/f/ServerGit/e-clocking.git" "F:\e-clocking"
+git config --global user.email "123@123.com.cn"
+git config --global user.name "liujiquan"
+cd  'C:\Work\Source\Repository'
+git add *
+git commit -a -m 'InjectSimple Code 20141015'
+
+git fetch origin master:temp
+git rebase temp
+git.exe push --progress  "origin" master:master
+git branch -D temp
+
+--------new branch InjectSimpleCode
+git branch InjectSimpleCode3.0
+git push --progress origin InjectSimpleCode3.0
+

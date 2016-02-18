@@ -1,0 +1,205 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: LoadStaticLibrary - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/LoadStaticLibrary.res" /d "NDEBUG" /d "_AFXDLL" "C:\Work\Source\Project\StaticLibray\LoadStaticLibrary\LoadStaticLibrary.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1797.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\..\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/LoadStaticLibrary.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\StaticLibray\LoadStaticLibrary\LoadStaticLibrary.cpp"
+"C:\Work\Source\Project\StaticLibray\LoadStaticLibrary\LoadStaticLibraryDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1797.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1798.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\..\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/LoadStaticLibrary.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\StaticLibray\LoadStaticLibrary\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1798.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1799.tmp" with contents
+[
+StaticLibray.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/LoadStaticLibrary.pdb" /machine:I386 /out:"Release/LoadStaticLibrary.exe" /libpath:"..\..\Lib" 
+.\Release\LoadStaticLibrary.obj
+.\Release\LoadStaticLibraryDlg.obj
+.\Release\StdAfx.obj
+.\Release\LoadStaticLibrary.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1799.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179A.bat" with contents
+[
+@echo off
+copy Release\LoadStaticLibrary.exe  ..\..\Bin
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179A.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+LoadStaticLibrary.cpp
+LoadStaticLibraryDlg.cpp
+Generating Code...
+Linking...
+LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Release\LoadStaticLibrary.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+LoadStaticLibrary.exe - 0 error(s), 1 warning(s)
+<h3>
+--------------------Configuration: LoadStaticLibrary - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/LoadStaticLibrary.res" /d "_DEBUG" /d "_AFXDLL" "C:\Work\Source\Project\StaticLibray\LoadStaticLibrary\LoadStaticLibrary.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179C.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\Include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/LoadStaticLibrary.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"C:\Work\Source\Project\StaticLibray\LoadStaticLibrary\LoadStaticLibrary.cpp"
+"C:\Work\Source\Project\StaticLibray\LoadStaticLibrary\LoadStaticLibraryDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179C.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\Include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/LoadStaticLibrary.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"C:\Work\Source\Project\StaticLibray\LoadStaticLibrary\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179D.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179E.tmp" with contents
+[
+StaticLibray.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/LoadStaticLibrary.pdb" /debug /machine:I386 /out:"Debug/LoadStaticLibrary.exe" /pdbtype:sept /libpath:"..\..\Lib_debug" 
+.\Debug\LoadStaticLibrary.obj
+.\Debug\LoadStaticLibraryDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\LoadStaticLibrary.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179E.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179F.bat" with contents
+[
+@echo off
+copy Debug\LoadStaticLibrary.exe  ..\..\Bin_debug
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP179F.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+LoadStaticLibrary.cpp
+LoadStaticLibraryDlg.cpp
+Generating Code...
+Linking...
+LINK : warning LNK4098: defaultlib "LIBCD" conflicts with use of other libs; use /NODEFAULTLIB:library
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\LoadStaticLibrary.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+LoadStaticLibrary.exe - 0 error(s), 1 warning(s)
+<h3>
+--------------------Configuration: LoadSharedDll - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/LoadSharedDll.res" /d "NDEBUG" /d "_AFXDLL" "C:\Work\Source\Project\StaticLibray\LoadSharedDll\LoadSharedDll.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A1.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\..\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/LoadSharedDll.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\StaticLibray\LoadSharedDll\LoadSharedDll.cpp"
+"C:\Work\Source\Project\StaticLibray\LoadSharedDll\LoadSharedDllDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A1.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A2.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\..\Include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/LoadSharedDll.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\StaticLibray\LoadSharedDll\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A2.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A3.tmp" with contents
+[
+SharedDll.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/LoadSharedDll.pdb" /machine:I386 /out:"Release/LoadSharedDll.exe" /libpath:"..\..\Lib" 
+.\Release\LoadSharedDll.obj
+.\Release\LoadSharedDllDlg.obj
+.\Release\StdAfx.obj
+.\Release\LoadSharedDll.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A3.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A4.bat" with contents
+[
+@echo off
+copy Release\LoadSharedDll.exe  ..\..\Bin
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A4.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+LoadSharedDll.cpp
+LoadSharedDllDlg.cpp
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Release\LoadSharedDll.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+LoadSharedDll.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: LoadSharedDll - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/LoadSharedDll.res" /d "_DEBUG" /d "_AFXDLL" "C:\Work\Source\Project\StaticLibray\LoadSharedDll\LoadSharedDll.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A6.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\Include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/LoadSharedDll.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"C:\Work\Source\Project\StaticLibray\LoadSharedDll\LoadSharedDll.cpp"
+"C:\Work\Source\Project\StaticLibray\LoadSharedDll\LoadSharedDllDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A6.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\Include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/LoadSharedDll.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"C:\Work\Source\Project\StaticLibray\LoadSharedDll\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A7.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A8.tmp" with contents
+[
+SharedDll.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/LoadSharedDll.pdb" /debug /machine:I386 /out:"Debug/LoadSharedDll.exe" /pdbtype:sept /libpath:"..\..\Lib_debug" 
+.\Debug\LoadSharedDll.obj
+.\Debug\LoadSharedDllDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\LoadSharedDll.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A8.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A9.bat" with contents
+[
+@echo off
+copy Debug\LoadSharedDll.exe  ..\..\Bin_debug
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP17A9.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+LoadSharedDll.cpp
+LoadSharedDllDlg.cpp
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\LoadSharedDll.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+LoadSharedDll.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

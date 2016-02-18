@@ -1,0 +1,39 @@
+zhushi 
+// 2014.10.15 Ver1.00[SEctionOperator 64Bits Conrresponding] Start
+// 2014.10.15 Ver1.00[SEctionOperator 64Bits Conrresponding] End
+
+
+copy Debug\$(TargetName).dll  ..\Bin_debug
+copy Debug\$(TargetName).lib  ..\Lib_debug
+
+
+..\Bin_debug\$(TargetName).dll 
+..\Lib_debug\$(TargetName).lib
+
+copy Debug\$(TargetName).exe  ..\Bin_debug
+..\Bin_debug\$(TargetName).exe
+
+
+C:\Documents and Settings\XPMUser\Desktop\123.txt
+
+
+copy Debug\$(TargetName).exe  ..\Bin_debug
+..\Bin_debug\$(TargetName).exe
+
+copy Release\$(TargetName).exe  ..\Bin
+..\Bin\$(TargetName).exe
+
+copy Debug\$(TargetName).exe  ..\Lib_debug
+..\Lib_debug\$(TargetName).lib
+copy Release\$(TargetName).exe  ..\Lib
+..\Lib\$(TargetName).lib
+
+copy Debug\$(TargetName).dll  ..\Bin_debug
+copy Debug\$(TargetName).lib  ..\Lib_debug
+..\BIn_debug\$(TargetName).dll
+..\Lib_debug\$(TargetName).lib
+
+copy Release\$(TargetName).dll  ..\Bin
+copy Release\$(TargetName).lib  ..\Lib
+..\Bin\$(TargetName).dll
+..\Lib\$(TargetName).lib

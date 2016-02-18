@@ -1,0 +1,142 @@
+ASF:
+
+基本組成但聞：asf對象
+struct asf對象
+{
+	DWORD128;		128位的全球唯一的对象标识符
+	DWORD64;		Object Size 对象大小域的值是由对象数据的大小加上					24比特之和
+	LPCTSTR	 data		个可变长的对象数据（Object Data		
+};
+
+邏輯組成：头对象（Header Object）、数据对象(Data Object)和索引对象(Index Object)
+	头对象是必需的并且必须放在每一个ASF文件的开头部分，
+	数据对象也是必需的，且一般情况下紧跟在头对象之后。
+	索引对象是可选的，但是 一般推荐使用
+
+struct Header Object
+{
+	File Properties Object
+	Stream Properties Object 1
+	....
+	Stream Properties Object N
+	<Other Header Object>
+};
+文件属性对象（File Properties Object）----全局文件属性。
+流属性对象（Stream Properties Object）----定义一个媒体流和其属性。
+内容描述对象（Content Description Object）----包含所有目录信息。
+部件下载对象（Component Download Object）----提供播放部件信息。
+流组织对象（Stream Groups Object）----逻辑上把多个媒体流组织在一起。
+可伸缩对象（Scalable Object）----定义媒体流之间的可伸缩的关系。
+优先级对象（Prioritization Object）----定义相关流的优先级。
+相互排斥对象(Mutual Exclusion Object)----定义排斥关系如语言选择。
+媒体相互依赖对象（Inter-Media Dependency Object）----定义混合媒体流之间的相互依赖关系。
+级别对象（Rating Object）----根据W3C PICS定义文件的级别。
+索引参数对象（Index Parameters Object）----提供必要的信息以重建ASF文件的索引。
+
+
+
+struct Data Object
+{
+	Date unit 0
+	Data Unit 1
+	....
+	Data Unit N	
+};
+
+struct Index Object
+{
+
+}
+
+<Other Obejct>
+
+===================================================================================
+// HeaderObject
+typedef  struct ASF_CHUNK_HeaderObject
+{
+	DWORD128		ChunkType;				// GUID
+	DWORD64			ChunkLength;			// data len + 24bits|3byte
+	DWORD			dwHeaderObjectCount;	// HeaderObjectCount
+	BYTE			Alignment;				// Alignment
+	BYTE			architecture;			// architecture
+}ASF_CHUNK_HeaderObject, *PASF_CHUNK_HeaderObject;
+he Header Object is represented using the following structure.
+
+Field name	Field type	Size (bits)
+Object ID	GUID	128
+Object Size	QWORD  	64
+Number of Header Objects	DWORD  	32
+Reserved1	BYTE	8
+Reserved2	BYTE	8
+
+The fields are defined as follows:
+
+Object ID 
+Specifies the GUID for the Header Object. This field shall be set to ASF_Header_Object.
+Object Size 
+Specifies the size of the Header Object. This includes the sum of 24 bytes plus the size of the objects contained in the Header Object. Valid values are at least 30 bytes.
+Number of Header Objects 
+Specifies the number of objects contained within the Header Object, not including this one. In addition, the Header Extension Object (sections 3.4 and 4) is counted as exactly one object regardless of the number of subobjects contained within it.
+Reserved1 
+This field must be set to the value 0x01. ASF parsers may safely ignore this value.
+Reserved2 
+This field must be set to the value 0x02. If the this value is different when read, the application should fail to source the content.
+
+=================================================================
+The File Properties Object is represented using the following structure.
+
+Field name	Field type	Size (bits)
+Object ID	GUID	128
+Object Size	QWORD	64
+File ID	GUID	128
+File Size	QWORD	64
+Creation Date	QWORD	64
+Data Packets Count	QWORD	64
+Play Duration	QWORD	64
+Send Duration	QWORD	64
+Preroll	QWORD	64
+Flags	DWORD	32
+Broadcast Flag		1 (LSB)
+Seekable Flag		1
+Reserved		30
+Minimum Data Packet Size	DWORD	32
+Maximum Data Packet Size	DWORD	32
+Maximum Bitrate	DWORD	32
+
+The fields are defined as follows:
+
+Object ID 
+Specifies the GUID for the File Properties Object. This field shall be set to ASF_File_Properties_Object.
+Object Size 
+Specifies the size, in bytes, of the File Properties Object. Valid values are at least 104 bytes.
+File ID 
+Specifies the unique identifier for this file. The value of this field shall be regenerated every time the file is modified in any way. The value of this field shall be identical to the value of the File ID field of the Data Object.
+File Size
+Specifies the size, in bytes, of the entire file. The value of this field is invalid if the Broadcast Flag bit in the Flags field is set to 1.
+Creation Date 
+Specifies the date and time of the initial creation of the file. The value is given as the number of 100-nanosecond intervals since January 1, 1601, according to Coordinated Universal Time (Greenwich Mean Time). The value of this field may be invalid if the Broadcast Flag bit in the Flags field is set to 1.
+Data Packets Count
+Specifies the number of Data Packet entries that exist within the Data Object. The value of this field is invalid if the Broadcast Flag bit in the Flags field is set to 1.
+Play Duration 
+Specifies the time needed to play the file in 100-nanosecond units. This value should include the duration (estimated, if an exact value is unavailable) of the the last media object in the presentation. The value of this field is invalid if the Broadcast Flag bit in the Flags field is set to 1.
+Send Duration 
+Specifies the time needed to send the file in 100-nanosecond units. This value should include the duration of the last packet in the content. The value of this field is invalid if the Broadcast Flag bit in the Flags field is set to 1. Players can ignore this value.
+Preroll 
+Specifies the amount of time to buffer data before starting to play the file, in millisecond units. If this value is nonzero, the Play Duration field and all of the payload Presentation Time fields have been offset by this amount. Therefore, player software must subtract the value in the preroll field from the play duration and presentation times to calculate their actual values.
+It follows that all payload Presentation Time fields need to be at least this value.
+
+Flags
+The flags are stored in Least Significant Byte (LSB) order.
+Broadcast Flag (bit 0)
+Specifies, if set, that a file is in the process of being created (for example, for recording applications), and thus that various values stored in the header objects are invalid. It is highly recommended that post-processing be performed to remove this condition at the earliest opportunity.
+Seekable Flag (bit 1)
+Specifies, if set, that a file is seekable. Note that for files containing a single audio stream and a Minimum Data Packet Size field equal to the Maximum Data Packet Size field, this flag shall always be set to 1. For files containing a single audio stream and a video stream or mutually exclusive video streams, this flag is only set to 1 if the file contains a matching Simple Index Object for each regular video stream (that is, video streams that are not hidden according to the method described in section 8.2.2).
+ Reserved (bits 2 – 31)
+Remaining 30 reserved flags shall be set to 0.
+
+Minimum Data Packet Size 
+Specifies the minimum Data Packet size in bytes. In general, the value of this field is invalid if the Broadcast Flag bit in the Flags field is set to 1. However, for the purposes of this specification, the values for the Minimum Data Packet Size and Maximum Data Packet Size fields shall be set to the same value, and this value should be set to the packet size, even when the Broadcast Flag in the Flags field is set to 1.
+Maximum Data Packet Size 
+Specifies the maximum Data Packet size in bytes. In general, the value of this field is invalid if the Broadcast Flag bit in the Flags field is set to 1. However, for the purposes of this specification, the values of the Minimum Data Packet Size and Maximum Data Packet Size fields shall be set to the same value, and this value should be set to the packet size, even when the Broadcast Flag field is set to 1.
+Maximum Bitrate 
+Specifies the maximum instantaneous bit rate in bits per second for the entire file. This shall equal the sum of the bit rates of the individual digital media streams. It shall be noted that the digital media stream includes ASF data packetization overhead as well as digital media data in payloads. Only those streams that have a free-standing Stream Properties Object in the header shall have their bit rates included in the sum; streams whose Stream 

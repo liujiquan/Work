@@ -1,0 +1,144 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Encrypt - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/Encrypt.res" /d "NDEBUG" /d "_AFXDLL" "C:\Work\Source\Project\Encrypt\Encrypt.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1B.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Encrypt.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\Encrypt\Encrypt.cpp"
+"C:\Work\Source\Project\Encrypt\EncryptDlg.cpp"
+"C:\Work\Source\Project\Encrypt\ExtendEdit.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1B.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1C.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Encrypt.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\Encrypt\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1C.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1D.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Work\Source\Project\Encrypt\Base64.cpp"
+"C:\Work\Source\Project\Encrypt\EncryptUtil.cpp"
+"C:\Work\Source\Project\Encrypt\CyberxEncrypt.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1D.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1E.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/Encrypt.pdb" /machine:I386 /out:"Release/Encrypt.exe" 
+.\Release\Encrypt.obj
+.\Release\EncryptDlg.obj
+.\Release\ExtendEdit.obj
+.\Release\StdAfx.obj
+.\Release\Base64.obj
+.\Release\EncryptUtil.obj
+.\Release\CyberxEncrypt.obj
+.\Release\Encrypt.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1E.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1F.bat" with contents
+[
+@echo off
+copy Release\Encrypt.exe  ..\Bin
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP1F.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Encrypt.cpp
+EncryptDlg.cpp
+ExtendEdit.cpp
+C:\Work\Source\Project\Encrypt\ExtendEdit.cpp(185) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+C:\Work\Source\Project\Encrypt\ExtendEdit.cpp(224) : warning C4018: '<' : signed/unsigned mismatch
+C:\Work\Source\Project\Encrypt\ExtendEdit.cpp(227) : warning C4305: '=' : truncation from 'const int' to 'char'
+C:\Work\Source\Project\Encrypt\ExtendEdit.cpp(227) : warning C4309: '=' : truncation of constant value
+Generating Code...
+Compiling...
+Base64.cpp
+EncryptUtil.cpp
+CyberxEncrypt.cpp
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Release\Encrypt.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+Encrypt.exe - 0 error(s), 4 warning(s)
+<h3>
+--------------------Configuration: Encrypt - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/Encrypt.res" /d "_DEBUG" "C:\Work\Source\Project\Encrypt\Encrypt.rc"" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP21.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\Encrypt\Encrypt.cpp"
+"C:\Work\Source\Project\Encrypt\EncryptDlg.cpp"
+"C:\Work\Source\Project\Encrypt\ExtendEdit.cpp"
+"C:\Work\Source\Project\Encrypt\Base64.cpp"
+"C:\Work\Source\Project\Encrypt\EncryptUtil.cpp"
+"C:\Work\Source\Project\Encrypt\CyberxEncrypt.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP21.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP22.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Encrypt.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Work\Source\Project\Encrypt\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP22.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP23.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Encrypt.pdb" /debug /machine:I386 /out:"Debug/Encrypt.exe" /pdbtype:sept 
+.\Debug\Encrypt.obj
+.\Debug\EncryptDlg.obj
+.\Debug\ExtendEdit.obj
+.\Debug\StdAfx.obj
+.\Debug\Base64.obj
+.\Debug\EncryptUtil.obj
+.\Debug\CyberxEncrypt.obj
+.\Debug\Encrypt.res
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP23.tmp"
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP24.bat" with contents
+[
+@echo off
+copy Debug\Encrypt.exe  ..\Bin_debug
+]
+Creating command line "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP24.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Encrypt.cpp
+EncryptDlg.cpp
+ExtendEdit.cpp
+c:\work\source\project\encrypt\extendedit.cpp(185) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+c:\work\source\project\encrypt\extendedit.cpp(224) : warning C4018: '<' : signed/unsigned mismatch
+c:\work\source\project\encrypt\extendedit.cpp(227) : warning C4305: '=' : truncation from 'const int' to 'char'
+c:\work\source\project\encrypt\extendedit.cpp(227) : warning C4309: '=' : truncation of constant value
+Base64.cpp
+EncryptUtil.cpp
+CyberxEncrypt.cpp
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Performing Custom Build Step on .\Debug\Encrypt.exe
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+Encrypt.exe - 0 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

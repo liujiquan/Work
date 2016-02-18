@@ -1,0 +1,149 @@
+/*----------------------------------------------------------------------
+  login.asp
+----------------------------------------------------------------------*/
+#login_Table {	padding: 180px 0 0 0; 
+			margin: 0;
+			text-align:center;
+			}
+#login_Table table tr td.Items{
+			padding:22px 5px 10px 5px;
+			margin:10px;
+			background-color: #669bc7;
+			}
+#login_Table td.title {
+			font-size:13px;
+			font-weight:600;
+			color:#004ea1;
+			text-align:left;
+			}
+td.Items td.iform {
+ 			padding: 0px 15px 0px 0px; 
+ 			}
+/*-----------------------------------------
+  Body css style
+-----------------------------------------*/	
+body#background
+		{
+			background:url(../images/background1.gif);	
+		}		
+/*-----------------------------------------
+  Server Div css style
+-----------------------------------------*/
+div#container	
+		{
+			width:700px;
+			height:400px;
+		}
+div#ButtonDiv
+		{
+			width:60%;
+			height:5%;
+			float:left;
+		}
+div#ButtonDiv input
+		{
+			/*background: url(C:/page/liujiquan/images/background1.gif);*/		
+		}
+div#InfoDiv
+		{
+			width:60%;
+			height:80%;
+			float:left;
+		}		
+div#ListDiv
+		{
+			width:40%;
+			height:100%;
+			float:left;
+		}
+div#ListDiv h2 
+		{
+			margin-bottom:0;
+			font-size:22px;
+			font-style:italic
+		}
+		
+/*-----------------------------------------
+  Client Div css style
+-----------------------------------------*/
+div#ButtonDiv_Client
+		{
+			width:15%;
+			float:left;
+		}
+div#ButtonDiv_Client table
+		{
+		    border:0px;
+		    margin-top:0px;
+		    margin-left:0px;
+		}		
+div#ButtonDiv_Client td
+		{
+			align:left;
+		    margin-top:0px;
+		}
+div#ButtonDiv_Client input
+		{
+			width:100px;
+			height:24px;
+			text-align:center;
+		}
+div#InfoDiv_Client
+		{
+			width:480px;
+			float:left;
+			overflow:auto;
+		}
+div#SendDataDiv_Client 
+		{
+			height:40px;
+			float:left;
+			margin-top:10px;
+		}	
+/*
+div#SendDataDiv_Client input
+		{
+			width:480px;
+			height:24px;
+			text-align:left;
+			float:left;
+		}
+*/
+div#ListDiv_Client
+		{
+			width:100px;
+			float:left;
+		}
+div#ListDiv_Client h2 
+		{
+			margin-bottom:0;
+			font-size:22px;
+			font-style:italic
+		}
+/*-----------------------------------------
+  Input class
+-----------------------------------------*/
+.input_Text
+		{
+			width:475px;
+			height:16px;
+			text-align:left;
+			float:left;
+			margin-top:1px;
+		}
+.input_Button
+		{
+			width:100px;
+			height:24px;
+			text-align:center;
+			float:left;
+			margin-left:2px;
+			margin-top:0px;
+		}
+/*-----------------------------------------
+  select class - listbox
+-----------------------------------------*/
+.select
+		{
+			width:100%;
+		}
